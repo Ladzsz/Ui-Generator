@@ -1,0 +1,88 @@
+/*styling body and html*/
+
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  body {
+    min-height: 100vh;
+  }
+
+/*styling the header*/
+
+header {
+    width: 100%;
+    height: 100px;
+    box-sizing: border-box;
+}
+.header_con {
+    background-color: #6A0DAD;
+    padding: 10px;
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 250px;
+}
+
+/*styling logo*/
+
+img {
+    border-radius: 36px;
+    width: 70px;
+    height: 50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+/*styling contact link*/
+
+.HomePage {
+    color: black;
+    background-color: #541c44;
+    padding: 15px;
+    border-radius: 48px;
+    font-size: 1.1em;
+    font-weight: bolder;
+}
+
+a:hover {
+    color: white;
+}
+
+.First_section {
+    text-align: center;
+    margin-top: 150px;
+}
+
+.First_section > p {
+font-weight: bolder;
+font-size: 2.8em;
+}
+
+.Second_section {
+    margin-top: 200px;
+    display: grid;
+    grid-template-columns: 400px 250px 400px;
+    gap: 50px;
+    justify-content: center;
+}
+
+.Second_section > a {
+    color: black;
+    background-color: #541c44;
+    padding: 15px;
+    border-radius: 48px;
+    font-size: 2.9em;
+    font-weight: bolder;
+    text-align: center;
+}
+
+.Second_section > a:hover {
+    color: white;
+}
