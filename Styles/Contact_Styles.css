@@ -55,6 +55,8 @@ a:hover {
     color: white;
 }
 
+/*styling first section*/
+
 .First_section {
     text-align: center;
     margin-top: 150px;
@@ -65,15 +67,20 @@ font-weight: bolder;
 font-size: 2.8em;
 }
 
+/*styling second section*/
+
 .Second_section {
     margin-top: 200px;
-    display: grid;
-    grid-template-columns: 400px 250px 400px;
+    display: flex;
     gap: 50px;
     justify-content: center;
 }
 
-.Second_section > a {
+.email > h2, .github > h2, .phonenumber > h2 {
+    text-align: center;
+}
+
+.email > a, .github > a, .phonenumber > a {
     color: black;
     background-color: #541c44;
     padding: 15px;
@@ -83,6 +90,26 @@ font-size: 2.8em;
     text-align: center;
 }
 
-.Second_section > a:hover {
+.Second_section > div > a:hover {
     color: white;
+}
+
+/*styling the footer */
+
+footer {
+    padding: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #6A0DAD;
+    width: 100%;
+    height: 75px;
+    box-sizing: border-box;
+    margin-top: 400px;
+}
+
+.footer_con {
+    color: black;
+    font-weight: bold;
+    font-size: 1.2em;
 }
