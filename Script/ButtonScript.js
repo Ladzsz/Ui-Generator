@@ -33,6 +33,4 @@ function generateButton() {
 
     document.getElementById('generated-html').textContent = htmlCode;
     document.getElementById('generated-css').textContent = cssCode;
-
-    document.getElementById('button-form').reset();
 }
