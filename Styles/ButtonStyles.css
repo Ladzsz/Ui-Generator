@@ -10,7 +10,7 @@ img {
 
 /*styling contact link*/
 
-.contact {
+.contact, .HomePage {
     color: black;
     background-color: #541c44;
     padding: 15px;
