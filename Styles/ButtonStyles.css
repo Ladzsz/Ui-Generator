@@ -10,13 +10,14 @@ img {
 
 /*styling contact link*/
 
-.contact {
+.contact, .HomePage {
     color: black;
     background-color: #541c44;
     padding: 15px;
     border-radius: 48px;
     font-size: 1.1em;
     font-weight: bolder;
+    cursor: pointer;
 }
 
 a:hover {
@@ -62,9 +63,87 @@ header {
     margin-top: 5%;
 }
 
-/*styling section 2*/
+/*styling Form section*/
+
+.section_2 {
+    margin-top: 10%;
+}
+
+.inputs {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 45px;
+    padding: 10%;
+    border-radius: 24px;
+    border: solid #541c44 5px;
+    background-color: #6A0DAD;
+}
+
+label {
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+input {
+    padding: 5px;
+    border-radius: 36px;
+}
+
+.btn-area {
+    text-align: center;
+    border: none;
+    margin-top: 5%;
+}
+
+.generateButton {
+    color: black;
+    background-color: #541c44;
+    padding: 15px;
+    border-radius: 48px;
+    font-size: 1.8em;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+.generateButton:hover {
+    color: white;
+}
 
 /*styling section 3*/
+
+.section_3 {
+    text-align: center;
+    margin-top: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.section_3 > p {
+    font-size: 1.9em;
+    font-weight: bold;
+}
+
+.pre-btn-container {
+    margin-top: 2%;
+    border: 5px solid #541c44;
+    border-radius: 24px;
+    padding: 10%;
+    width: 10%;
+    height: 10%;
+    margin-bottom: 3%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.genrated-code {
+    margin-top: 3%;
+    display: flex;
+    gap: 40px;
+    margin-bottom: 5%;
+}
 
 /*styling footer section*/
 
