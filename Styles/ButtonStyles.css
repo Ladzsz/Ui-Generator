@@ -17,6 +17,7 @@ img {
     border-radius: 48px;
     font-size: 1.1em;
     font-weight: bolder;
+    cursor: pointer;
 }
 
 a:hover {
@@ -62,7 +63,47 @@ header {
     margin-top: 5%;
 }
 
-/*styling section 2*/
+/*styling Form section*/
+
+.inputs {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 45px;
+    padding: 10%;
+    border-radius: 24px;
+    border: solid #541c44 5px;
+    background-color: #6A0DAD;
+}
+
+label {
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+input {
+    padding: 5px;
+    border-radius: 36px;
+}
+
+.btn-area {
+    text-align: center;
+    border: none;
+    margin-top: 5%;
+}
+
+.generateButton {
+    color: black;
+    background-color: #541c44;
+    padding: 15px;
+    border-radius: 48px;
+    font-size: 1.1em;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+.generateButton:hover {
+    color: white;
+}
 
 /*styling section 3*/
 

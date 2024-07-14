@@ -28,28 +28,46 @@
     <section class="section_2">
 
         <form id="button-form">
-            <label for="text">Button Text:</label>
-            <input type="text" id="text" name="text" value="Button"><br><br>
+            <fieldset class="inputs">
+                <div class="input-group">
+                    <label for="text">Button Text:</label>
+                    <input type="text" id="text" name="text" value="Button">
+                </div>
         
-            <label for="bgColor">Background Color:</label>
-            <input type="color" id="bgColor" name="bgColor" value="#4CAF50"><br><br>
+                <div class="input-group">
+                    <label for="bgColor">Background Color:</label>
+                    <input type="color" id="bgColor" name="bgColor" value="#4CAF50">
+                </div>
         
-            <label for="textColor">Text Color:</label>
-            <input type="color" id="textColor" name="textColor" value="#FFFFFF"><br><br>
+                <div class="input-group">
+                    <label for="textColor">Text Color:</label>
+                    <input type="color" id="textColor" name="textColor" value="#FFFFFF">
+                </div>
         
-            <label for="padding">Padding:</label>
-            <input type="text" id="padding" name="padding" value="10px 20px"><br><br>
+                <div class="input-group">
+                    <label for="padding">Padding:</label>
+                    <input type="text" id="padding" name="padding" value="10px 20px">
+                </div>
         
-            <label for="border">Border:</label>
-            <input type="text" id="border" name="border" value="2px solid #4CAF50"><br><br>
+                <div class="input-group">
+                    <label for="border">Border:</label>
+                    <input type="text" id="border" name="border" value="2px solid #4CAF50">
+                </div>
         
-            <label for="borderRadius">Border Radius:</label>
-            <input type="text" id="borderRadius" name="borderRadius" value="5px"><br><br>
+                <div class="input-group">
+                    <label for="borderRadius">Border Radius:</label>
+                    <input type="text" id="borderRadius" name="borderRadius" value="5px">
+                </div>
         
-            <label for="fontSize">Font Size:</label>
-            <input type="text" id="fontSize" name="fontSize" value="16px"><br><br>
-        
-            <button type="button" onclick="generateButton()">Generate Button</button>
+                <div class="input-group">
+                    <label for="fontSize">Font Size:</label>
+                    <input type="text" id="fontSize" name="fontSize" value="16px">
+                </div>
+            </fieldset>
+            
+            <fieldset class="btn-area">
+                <button type="button" onclick="generateButton()" class="generateButton">Generate Button</button>
+            </fieldset>
           </form>
     </section>
 
