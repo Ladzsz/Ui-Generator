@@ -21,6 +21,7 @@
         </div>
     </header>
 
+    <!--First section-->
     <section class="section_1">
         <h1 class="Top_text">Button Generator</h1>
     </section>
@@ -64,6 +65,11 @@
                     <label for="fontSize">Font Size:</label>
                     <input type="text" id="fontSize" name="fontSize" value="16px">
                 </div>
+
+                <div class="input-group">
+                    <label for="fontWeight">Font Weight:</label>
+                    <input type="text" id="fontWeight" name="fontWeight" value="400">
+                </div>
             </fieldset>
 
             <fieldset class="btn-area">
@@ -81,8 +87,16 @@
 
         <p>Generated Code</p>
         <div class="genrated-code">
-            <div class="code" id="generated-html"></div>
-            <div class="code" id="generated-css"></div>
+
+            <div class="gencode-html">
+                <h2>Generated HTML</h2>
+                <div class="code" id="generated-html"></div>
+            </div>
+            
+            <div class="gencode-css">
+                <h2>Generated CSS</h2>
+                <div class="code" id="generated-css"></div>
+            </div>
         </div>
     </section>
 

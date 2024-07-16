@@ -9,6 +9,7 @@ function generateButton() {
     const border = document.getElementById('border').value;
     const borderRadius = document.getElementById('borderRadius').value;
     const fontSize = document.getElementById('fontSize').value;
+    const fontWeight = document.getElementById('fontWeight').value;
 
     //creating preview button
     const previewButton = document.getElementById('preview-button');
@@ -19,6 +20,7 @@ function generateButton() {
     previewButton.style.border = border;
     previewButton.style.borderRadius = borderRadius;
     previewButton.style.fontSize = fontSize;
+    previewButton.style.fontWeight = fontWeight;
 
     //displaying html and css code to user
     const htmlCode = `<button>${text}</button>`;
@@ -29,6 +31,7 @@ function generateButton() {
     border: ${border};
     border-radius: ${borderRadius};
     font-size: ${fontSize};
+    font-weight: ${fontWeight}
     }`;
 
     document.getElementById('generated-html').innerHTML = `<textarea rows="10" cols="50" style="background-color: #1E1E1E; color: #4EC9B0; padding: 20px;">${htmlCode}</textarea>`;
