@@ -61,8 +61,60 @@ header {
     text-align: center;
     font-size: 2.1em;
     margin-top: 5%;
+    margin-bottom: 5%;
 }
 
+/*styling form section*/
+
+.form_sec {
+    margin-bottom: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5%;
+    border-radius: 24px;
+    border: solid #541c44 5px;
+    background-color: #6A0DAD;
+}
+
+fieldset {
+    border: none;
+}
+
+label, select {
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.dropdown-menu {
+    margin-bottom: 10%;
+}
+
+.FlexGrid {
+    margin-top: 10%;
+    display: flex;
+    gap: 50%;
+}
+
+.flex-grid-box {
+    text-align: center;
+}
+
+/*styling dynamic inputs in form*/
+
+.input-box {
+margin-bottom: 20px;
+}
+
+.js-input {
+    padding: 5px;
+    border-radius: 36px;
+}
+
+.input-label {
+    display: flex;
+    flex-direction: column;
+}
 
 /*styling footer section*/
 
