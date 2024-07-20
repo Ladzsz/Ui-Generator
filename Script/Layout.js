@@ -15,16 +15,21 @@ function generatelayout() {
             for (let i = 1; i <= count; i++) {
                 const inputBox = document.createElement('div');
                 inputBox.classList.add('input-box');
+
+                const inputlabel = document.createElement('div');
+                inputlabel.classList.add('input-label');
                 
                 const label = document.createElement('label');
-                label.textContent = `Input ${i}: `;
+                label.textContent = `Column amount for Row ${i}: `;
                 
                 const input = document.createElement('input');
                 input.type = 'text';
-                input.name = `input${i}`;
+                input.name = `Row${i}`;
+                input.classList.add('js-input');
 
-                inputBox.appendChild(label);
-                inputBox.appendChild(input);
+                inputlabel.appendChild(label);
+                inputlabel.appendChild(input);
+                inputBox.appendChild(inputlabel);
                 inputContainer.appendChild(inputBox);
               }
             });

@@ -83,7 +83,37 @@ fieldset {
 
 label, select {
     font-weight: bold;
-    font-size: 1.2em;
+    font-size: 1.1em;
+}
+
+.dropdown-menu {
+    margin-bottom: 10%;
+}
+
+.FlexGrid {
+    margin-top: 10%;
+    display: flex;
+    gap: 50%;
+}
+
+.flex-grid-box {
+    text-align: center;
+}
+
+/*styling dynamic inputs in form*/
+
+.input-box {
+margin-bottom: 20px;
+}
+
+.js-input {
+    padding: 5px;
+    border-radius: 36px;
+}
+
+.input-label {
+    display: flex;
+    flex-direction: column;
 }
 
 /*styling footer section*/

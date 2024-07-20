@@ -33,7 +33,8 @@
         <form class="form-container">
             <fieldset class="rowsetter">
 
-                <label for="Rowcount">Select Row Amount:</label>
+                <div class="dropdown-menu">
+                    <label for="Rowcount" class="rowcount_label">Select Row Amount:</label>
 
                 <select id="Rowcount" name="numbers">
                     <option value="1">1</option>
@@ -43,7 +44,8 @@
                     <option value="5">5</option>
                     <option value="6">6</option>
                 </select>
-
+                </div>
+                
                 <div id="inputContainer">
 
                 </div>
@@ -51,12 +53,17 @@
 
             <!--radio buttons to select either flex box or grid-->
             <fieldset class="FlexGrid">
+
+                <div class="flex-grid-box">
+                    <input type="radio" id="Flexbox-btn" name="layout-radio" value="Flexbox-btn" checked>
+                    <label for="Flexbox-btn">Flexbox</label>
+                </div>
                 
-                <input type="radio" id="Flexbox-btn" name="layout-radio" value="Flexbox-btn" checked>
-                <label for="Flexbox-btn">Flexbox</label>
+                <div class="flex-grid-box">
+                    <input type="radio" id="Grid-btn" name="layout-radio" value="Grid-btn">
+                    <label for="Grid-btn">Grid</label>
+                </div>
                 
-                <input type="radio" id="Grid-btn" name="layout-radio" value="Grid-btn">
-                <label for="Grid-btn">Grid</label>
             </fieldset>
 
             <fieldset class="inputs">
