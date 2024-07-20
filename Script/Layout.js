@@ -28,11 +28,43 @@ function generatelayout() {
                 inputContainer.appendChild(inputBox);
               }
             });
+
         //running the dropdown automatically
             
         document.getElementById('Rowcount').dispatchEvent(new Event('change')); 
+
+        //function to choose either flexbox or grid
+
+        function FlexorGrid() {
+
+            //grabbinng elements
+            document.getElementById("Flexbox-btn").addEventListener('change', FlexorGrid);
+            document.getElementById("Grid-btn").addEventListener('change', FlexorGrid);
+
+            //choosing function to run based on radio button
+            if (document.getElementById("Flexbox-btn").checked ) {
+                generateFlexbox();
+            } else if (document.getElementById("Grid-btn").checked) {
+                generateGrid();
+            }
+        }
+
+        //function to take flex inputs and generate preview and code
+
+        function generateFlexbox() {
+            console.log("flex")
+        }
+
+        //function to take grid inputs and generate preview and code
+
+        function generateGrid() {
+            console.log("grid")
+        }
+
+        FlexorGrid();
+
     } 
     rowAmount();
-}
 
+}
 generatelayout();
