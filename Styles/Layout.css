@@ -77,6 +77,10 @@ header {
     background-color: #6A0DAD;
 }
 
+.rowsetter {
+    text-align: center;
+}
+
 fieldset {
     border: none;
 }
@@ -93,11 +97,56 @@ label, select {
 .FlexGrid {
     margin-top: 10%;
     display: flex;
-    gap: 50%;
+    gap: 25%;
+    margin-left: 30%;
 }
 
 .flex-grid-box {
     text-align: center;
+    margin-bottom: 10%;
+}
+
+.flex-container-properties {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 45px;
+    padding: 10%;
+    border-radius: 24px;
+    border: solid #541c44 5px;
+    background-color: #6A0DAD;
+    margin-bottom: 10%;
+}
+
+.flex-items {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 45px;
+    padding: 10%;
+    border-radius: 24px;
+    border: solid #541c44 5px;
+    background-color: #6A0DAD;
+}
+
+/*styling submit button in form*/ 
+
+.btn-area {
+    text-align: center;
+    border: none;
+    margin-top: 10%;
+}
+
+.submit-flex-btn {
+    color: black;
+    background-color: #541c44;
+    padding: 15px;
+    border-radius: 48px;
+    font-size: 1.8em;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+.generateButton:hover {
+    color: white;
 }
 
 /*styling dynamic inputs in form*/
@@ -114,6 +163,42 @@ margin-bottom: 20px;
 .input-label {
     display: flex;
     flex-direction: column;
+}
+
+/*styling section 3*/
+
+.section_3 {
+    text-align: center;
+    margin-top: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.section_3 > p {
+    font-size: 1.9em;
+    font-weight: bold;
+}
+
+.pre-layout-container {
+    margin-top: 2%;
+    border: 5px solid #541c44;
+    border-radius: 24px;
+    padding: 10%;
+    width: 10%;
+    height: 10%;
+    margin-bottom: 3%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.genrated-code {
+    margin-top: 3%;
+    display: flex;
+    gap: 40px;
+    margin-bottom: 5%;
 }
 
 /*styling footer section*/
