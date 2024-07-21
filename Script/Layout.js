@@ -45,11 +45,17 @@ function generatelayout() {
             //grabbinng elements
             document.getElementById("Flexbox-btn").addEventListener('change', FlexorGrid);
             document.getElementById("Grid-btn").addEventListener('change', FlexorGrid);
+            let FlexSection = document.querySelector('.Flexinputs');
+            let GridSection = document.querySelector('.Grid-inputs')
 
-            //choosing function to run based on radio button
+            //choosing function to run and screen to display based on radio button
             if (document.getElementById("Flexbox-btn").checked ) {
+                GridSection.style.display = "none";
+                FlexSection.style.display = "block";
                 generateFlexbox();
             } else if (document.getElementById("Grid-btn").checked) {
+                FlexSection.style.display = "none";
+                GridSection.style.display = "block";
                 generateGrid();
             }
         }
