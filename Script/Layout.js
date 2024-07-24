@@ -5,31 +5,31 @@ function generatelayout() {
 
     function cellAmount() {
 
-        const cellInput = document.getElementById('cells');
+            const cellInput = document.getElementById('cells');
 
-        // Adding event listener for input changes
-        cellInput.addEventListener('change', function() {
-        const count = parseInt(this.value);
+            // Adding event listener for input changes
+            cellInput.addEventListener('change', function() {
+            const count = parseInt(this.value);
 
-        // Get the container and the preview div
-        const container = document.querySelector(".preview-div");
-        const preDiv = document.querySelector(".preview-div-cell");
+            // Get the container and the preview div
+            const container = document.querySelector(".preview-div");
+            const preDiv = document.querySelector(".preview-div-cell");
 
-        // Clear previous rows except for the first one
-        const cells = container.querySelectorAll(".preview-div-cell");
-        cells.forEach((cell, index) => {
-            if (index > 0) { 
-                container.removeChild(cell);
+            // Clear previous rows except for the first one
+            const cells = container.querySelectorAll(".preview-div-cell");
+            cells.forEach((cell, index) => {
+                if (index > 0) { 
+                    container.removeChild(cell);
+                }
+            });
+
+            // Create new rows
+            for (let i = 1; i < count; i++) {
+                const cell = preDiv.cloneNode(true);
+                cell.querySelector('p').textContent = `Cell ${i + 1}`; 
+                container.appendChild(cell); 
             }
         });
-
-        // Create new rows
-        for (let i = 1; i < count; i++) {
-            const cell = preDiv.cloneNode(true);
-            cell.querySelector('p').textContent = `Cell ${i + 1}`; 
-            container.appendChild(cell); 
-        }
-    });
 
         //bringing in the dropdown
 
@@ -70,6 +70,7 @@ function generatelayout() {
             //function to take flex inputs and generate preview and code
 
             function generateFlexbox() {
+
                 //getting all the container properties
                 const containerStyles = {
                     display: document.getElementById('display').value,
@@ -90,15 +91,9 @@ function generatelayout() {
                     alignSelf: document.getElementById('align-self').value
                 };
 
-                //submit button to preview flex result
+                //submit button to preview flex and generate code
                 document.querySelector('.submit-flex-button').addEventListener('click', (event) => {
                     event.preventDefault();
-                    PreviewFlex();
-                    GenratedFlexCode();
-                });
-
-                //function to preview flex result
-                function PreviewFlex() {
 
                     //manipulating the preview div
                     const preview = document.querySelector('.preview-div');
@@ -122,10 +117,7 @@ function generatelayout() {
                     previewCell.style.flexShrink = CellStyles.flexShrink;
                     previewCell.style.flexBasis = CellStyles.flexBasis;
                     previewCell.style.alignSelf = CellStyles.alignSelf;
-                }
-
-                //function to display generated flex code
-                function GenratedFlexCode() {
+                
 
                     //generated html
                     const htmlCode = `<div class="container">
@@ -156,8 +148,11 @@ function generatelayout() {
                     //displaying code in styled text boxes    
                     document.getElementById('generated-html').innerHTML = `<textarea rows="10" cols="50" style="background-color: #1E1E1E; color: #4EC9B0; padding: 20px;">${htmlCode}<br><br></textarea>`;
                     document.getElementById('generated-css').innerHTML = `<textarea rows="10" cols="50" style="background-color: #1E1E1E; color: #4EC9B0; padding: 20px;">${cssCode}<br><br></textarea>`;
-                }
+                    
+                });
+
             }
+            
 
             //function to take grid inputs and generate preview and code
 
@@ -165,8 +160,6 @@ function generatelayout() {
                 console.log("grid")
             }
         }
-
-        
 
         //calling flex or grid
         FlexorGrid();
@@ -176,5 +169,7 @@ function generatelayout() {
     cellAmount();
 
 }
+
+
 //calling generate latyout
 generatelayout();
