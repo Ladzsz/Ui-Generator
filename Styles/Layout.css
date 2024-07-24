@@ -194,6 +194,10 @@ margin-bottom: 20px;
     align-items: center;
 }
 
+.preview-div {
+    background-color: darkgray;
+}
+
 .genrated-code {
     margin-top: 3%;
     display: flex;
