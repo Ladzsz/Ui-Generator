@@ -67,7 +67,7 @@ header {
 /*styling form section*/
 
 .form_sec {
-    margin-bottom: 10%;
+    margin-bottom: 5%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -75,10 +75,6 @@ header {
     border-radius: 24px;
     border: solid #541c44 5px;
     background-color: #6A0DAD;
-}
-
-.cellsetter {
-    text-align: center;
 }
 
 fieldset {
@@ -94,17 +90,6 @@ label, select {
     margin-bottom: 3%;
 }
 
-.FlexGrid {
-    margin-top: 10%;
-    display: flex;
-    gap: 25%;
-    margin-left: 30%;
-}
-
-.flex-grid-box {
-    text-align: center;
-    margin-bottom: 10%;
-}
 
 .flex-container-properties {
     display: grid;
@@ -149,6 +134,8 @@ label, select {
     color: white;
 }
 
+
+
 /*styling dynamic inputs in form*/
 
 .input-box {
@@ -165,7 +152,13 @@ margin-bottom: 20px;
     flex-direction: column;
 }
 
-/*styling section 3*/
+/*styling the choose cells section*/
+
+.cellsetter {
+    text-align: center;
+}
+
+/*styling section 3 preview*/
 
 .section_3 {
     text-align: center;

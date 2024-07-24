@@ -2,13 +2,11 @@
 
 document.addEventListener('DOMContentLoaded', () => {
     generatelayout();
+    cellAmount();
+    generateFlexbox();
 });
 
-// function to call other functions
-function generatelayout() {
-    cellAmount();
-    FlexorGrid();
-}
+
 
 
 //function to create cells and erase them
@@ -33,41 +31,19 @@ function generatelayout() {
             });
 
             // Create new rows
-            for (let i = 1; i < count; i++) {
+            for (let i = 1; i <= count; i++) {
                 const cell = preDiv.cloneNode(true);
-                cell.querySelector('p').textContent = `Cell ${i + 1}`; 
+                cell.querySelector('p').textContent = `Cell ${i}`; 
                 container.appendChild(cell); 
             }
         });
-        
 
-        //bringing in the dropdown
-
-        let cellcount = document.getElementById("cells");    
-
-        //running the dropdown automatically
-        count.addEventListener('change', cloneElement); 
     } 
 
-    function FlexorGrid() {
+    let cellcount = document.getElementById("cells");    
 
-         //grabbinng elements
-         document.getElementById("Flexbox-btn").addEventListener('change', FlexorGrid);
-         document.getElementById("Grid-btn").addEventListener('change', FlexorGrid);
-         let FlexSection = document.querySelector('.Flexinputs');
-         let GridSection = document.querySelector('.Grid-inputs')
-
-         //choosing function to run and screen to display based on radio button
-         if (document.getElementById("Flexbox-btn").checked ) {
-             GridSection.style.display = "none";
-             FlexSection.style.display = "block";
-             generateFlexbox();
-         } else if (document.getElementById("Grid-btn").checked) {
-             FlexSection.style.display = "none";
-             GridSection.style.display = "block";
-             generateGrid();
-         }
-    }
+        //running the dropdown automatically
+        cellcount.addEventListener('change', cellAmount); 
 
     //function to take flex inputs and generate preview and code
 
@@ -93,70 +69,62 @@ function generatelayout() {
             alignSelf: document.getElementById('align-self').value
         };
 
-        //submit button to preview flex and generate code
-        document.querySelector('.submit-flex-button').addEventListener('click', (event) => {
-            event.preventDefault();
-
-            //manipulating the preview div
-            const preview = document.querySelector('.preview-div');
-
-            //setting styles for div
-            preview.style.display = containerStyles.display;
-            preview.style.flexDirection = containerStyles.flexDirection;
-            preview.style.flexWrap = containerStyles.flexWrap;
-            preview.style.justifyContent = containerStyles.justifyContent;
-            preview.style.alignItems = containerStyles.alignItems;
-            preview.style.alignContent = containerStyles.alignContent;
-            preview.style.gap = containerStyles.gap;
-
-            //manipulating the cells
-
-            const previewCell = document.querySelector('.preview-div-cell');
-
-            //setting styles for the cells
-            previewCell.style.order = CellStyles.order;
-            previewCell.style.flexGrow = CellStyles.flexGrow;
-            previewCell.style.flexShrink = CellStyles.flexShrink;
-            previewCell.style.flexBasis = CellStyles.flexBasis;
-            previewCell.style.alignSelf = CellStyles.alignSelf;
         
 
-            //generated html
-            const htmlCode = `<div class="container">
-                    <div class="item">Item 1</div>
-                    <div class="item">Item 2</div>
-                    <div class="item">Item 3</div>
-                    </div>`;
+        //manipulating the preview div
+        const preview = document.querySelector('.preview-div');
 
-            //generated css        
-            const cssCode = `.container {
-                    display: ${containerStyles.display};
-                    flex-direction: ${containerStyles.flexDirection};
-                    flex-wrap: ${containerStyles.flexWrap};
-                    justify-content: ${containerStyles.justifyContent};
-                    align-items: ${containerStyles.alignItems};
-                    align-content: ${containerStyles.alignContent};
-                    gap: ${containerStyles.gap};
-                }
+        //setting styles for div
+        preview.style.display = containerStyles.display;
+        preview.style.flexDirection = containerStyles.flexDirection;
+        preview.style.flexWrap = containerStyles.flexWrap;
+        preview.style.justifyContent = containerStyles.justifyContent;
+        preview.style.alignItems = containerStyles.alignItems;
+        preview.style.alignContent = containerStyles.alignContent;
+        preview.style.gap = containerStyles.gap;
 
-                .item {
-                    order: ${itemStyles.order};
-                    flex-grow: ${itemStyles.flexGrow};
-                    flex-shrink: ${itemStyles.flexShrink};
-                    flex-basis: ${itemStyles.flexBasis};
-                    align-self: ${itemStyles.alignSelf};
-                }`;
+        //manipulating the cells
 
-            //displaying code in styled text boxes    
-            document.getElementById('generated-html').innerHTML = `<textarea rows="10" cols="50" style="background-color: #1E1E1E; color: #4EC9B0; padding: 20px;">${htmlCode}<br><br></textarea>`;
-            document.getElementById('generated-css').innerHTML = `<textarea rows="10" cols="50" style="background-color: #1E1E1E; color: #4EC9B0; padding: 20px;">${cssCode}<br><br></textarea>`;
+        const previewCell = document.querySelectorAll('.preview-div-cell');
+
+        //setting styles for the cells
+        previewCell.forEach(cell => {
+            cell.style.order = CellStyles.order;
+            cell.style.flexGrow = CellStyles.flexGrow;
+            cell.style.flexShrink = CellStyles.flexShrink;
+            cell.style.flexBasis = CellStyles.flexBasis;
+            cell.style.alignSelf = CellStyles.alignSelf;
+        });
+    
+
+        //generated html
+        const htmlCode = `<div class="container">
+                ${Array.from(document.querySelectorAll('.preview-div-cell')).map(cell => `<div class="cell">${cell.querySelector('p').textContent}</div>`).join('\n')}
+                </div>`;
+
+        //generated css        
+        const cssCode = `.container {\n
+            display: ${containerStyles.display};
+            flex-direction: ${containerStyles.flexDirection};
+            flex-wrap: ${containerStyles.flexWrap};
+            justify-content: ${containerStyles.justifyContent};
+            align-items: ${containerStyles.alignItems};
+            align-content: ${containerStyles.alignContent};
+            gap: ${containerStyles.gap};
+        }
+        \n
+        .cell {
+            order: ${CellStyles.order};
+            flex-grow: ${CellStyles.flexGrow};
+            flex-shrink: ${CellStyles.flexShrink};
+            flex-basis: ${CellStyles.flexBasis};
+            align-self: ${CellStyles.alignSelf};
+            }`;
+
+        //displaying code in styled text boxes    
+        document.getElementById('generated-html').innerHTML = `<textarea rows="10" cols="50" style="background-color: #1E1E1E; color: #4EC9B0; padding: 20px;">${htmlCode}</textarea>`;
+        document.getElementById('generated-css').innerHTML = `<textarea rows="10" cols="50" style="background-color: #1E1E1E; color: #4EC9B0; padding: 20px;">${cssCode}</textarea>`;
             
-        });    
-    }
-
-    //function to take grid inputs and generate preview and code
-
-    function generateGrid() {
-        console.log("grid")
+         
     }
   
