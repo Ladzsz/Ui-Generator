@@ -77,7 +77,7 @@ header {
     background-color: #6A0DAD;
 }
 
-.rowsetter {
+.cellsetter {
     text-align: center;
 }
 
@@ -90,8 +90,8 @@ label, select {
     font-size: 1.1em;
 }
 
-.dropdown-menu {
-    margin-bottom: 10%;
+.cell_number {
+    margin-bottom: 3%;
 }
 
 .FlexGrid {
@@ -195,7 +195,16 @@ margin-bottom: 20px;
 }
 
 .preview-div {
+    background-color: lightgrey;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.preview-div-cell {
     background-color: darkgray;
+    padding: 20px;
+    border-radius: 8px;
+    border: solid black 1px;
 }
 
 .genrated-code {

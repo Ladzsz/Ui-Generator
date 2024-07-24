@@ -3,35 +3,37 @@
 function generatelayout() {
     //function to generate rows
 
-    function rowAmount() {
-        //grabbing inputs
-        document.getElementById('Rowcount').addEventListener('change', function() {
-            const count = parseInt(this.value);
+    function cellAmount() {
 
-            //bringing in the preview div to clone it
+        const cellInput = document.getElementById('cells');
 
-            let preDiv = document.querySelector(".preview-div");
+        // Adding event listener for input changes
+        cellInput.addEventListener('change', function() {
+        const count = parseInt(this.value);
 
-            // Clear previous rows
-            const container = preDiv.parentNode;
-            const rows = container.querySelectorAll(".preview-div");
-            rows.forEach((row, index) => {
-                if (index > 0) { 
-                    container.removeChild(row);
-                }
-            });
+        // Get the container and the preview div
+        const container = document.querySelector(".preview-div");
+        const preDiv = document.querySelector(".preview-div-cell");
 
-
-            // Create new rows
-            for (let i = 0; i < count; i++) {
-                const row = preDiv.cloneNode(true); 
-                container.appendChild(row); 
+        // Clear previous rows except for the first one
+        const cells = container.querySelectorAll(".preview-div-cell");
+        cells.forEach((cell, index) => {
+            if (index > 0) { 
+                container.removeChild(cell);
             }
         });
 
+        // Create new rows
+        for (let i = 1; i < count; i++) {
+            const cell = preDiv.cloneNode(true);
+            cell.querySelector('p').textContent = `Cell ${i + 1}`; 
+            container.appendChild(cell); 
+        }
+    });
+
         //bringing in the dropdown
 
-        let rowcount = document.getElementById("Rowcount");    
+        let rowcount = document.getElementById("cells");    
 
         //running the dropdown automatically
         rowcount.addEventListener('change', cloneElement); 
@@ -80,7 +82,7 @@ function generatelayout() {
                 };
 
                 //getting all the item properties
-                const itemStyles = {
+                const CellStyles = {
                     order: document.getElementById('order').value,
                     flexGrow: document.getElementById('flex-grow').value,
                     flexShrink: document.getElementById('flex-shrink').value,
@@ -101,10 +103,6 @@ function generatelayout() {
                     //manipulating the preview div
                     const preview = document.querySelector('.preview-div');
 
-                    //adding rows to div
-
-                    
-
                     //setting styles for div
                     preview.style.display = containerStyles.display;
                     preview.style.flexDirection = containerStyles.flexDirection;
@@ -114,7 +112,16 @@ function generatelayout() {
                     preview.style.alignContent = containerStyles.alignContent;
                     preview.style.gap = containerStyles.gap;
 
-                    
+                    //manipulating the cells
+
+                    const previewCell = document.querySelector('.preview-div-cell');
+
+                    //setting styles for the cells
+                    previewCell.style.order = CellStyles.order;
+                    previewCell.style.flexGrow = CellStyles.flexGrow;
+                    previewCell.style.flexShrink = CellStyles.flexShrink;
+                    previewCell.style.flexBasis = CellStyles.flexBasis;
+                    previewCell.style.alignSelf = CellStyles.alignSelf;
                 }
 
                 //function to display generated flex code
@@ -166,7 +173,7 @@ function generatelayout() {
 
     } 
     //calling row amount
-    rowAmount();
+    cellAmount();
 
 }
 //calling generate latyout
