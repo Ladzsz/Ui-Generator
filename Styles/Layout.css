@@ -71,7 +71,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 5%;
+    padding: 2%;
     border-radius: 24px;
     border: solid #541c44 5px;
     background-color: #6A0DAD;
@@ -112,30 +112,6 @@ label, select {
     background-color: #6A0DAD;
 }
 
-/*styling submit button in form*/ 
-
-.btn-area {
-    text-align: center;
-    border: none;
-    margin-top: 10%;
-}
-
-.submit-flex-btn {
-    color: black;
-    background-color: #541c44;
-    padding: 15px;
-    border-radius: 48px;
-    font-size: 1.8em;
-    font-weight: bolder;
-    cursor: pointer;
-}
-
-.generateButton:hover {
-    color: white;
-}
-
-
-
 /*styling dynamic inputs in form*/
 
 .input-box {
@@ -156,6 +132,29 @@ margin-bottom: 20px;
 
 .cellsetter {
     text-align: center;
+    margin-top: 5%;
+}
+
+/*styling submit button*/ 
+
+.btn-area {
+    text-align: center;
+    border: none;
+    margin-top: 10%;
+}
+
+.submit-flex-btn {
+    color: black;
+    background-color: #541c44;
+    padding: 15px;
+    border-radius: 48px;
+    font-size: 1.8em;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+.generateButton:hover {
+    color: white;
 }
 
 /*styling section 3 preview*/

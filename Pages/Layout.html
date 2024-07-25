@@ -119,40 +119,41 @@
                             <option value="baseline">baseline</option>
                             <option value="stretch">stretch</option>
                         </select>
-                
                     </div>
 
-                    <fieldset class="btn-area">
-                        <button type="button" onclick="generateFlexbox()" class="submit-flex-btn">Lets Flex!</button>
+                    <!--Fieldset to allow user to choose cell amount 0-6-->
+                    <fieldset class="cellsetter">
+                        <label for="cells">Select Cell amount:</label>
+                        <select id="cells">
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                        </select>
                     </fieldset>
             </fieldset>
         </form>
     </section>
 
-    <!--section to allow user to choose cell amount 1-6-->
-    <section class="set_cells">
+    <!--Section to allow user to submit styles and attributes-->
 
-        <form>
-            <fieldset class="cellsetter">
-                <label for="cells">Select Cell amount:</label>
-                <select id="cells">
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                    <option value="6">6</option>
-                </select>
-            </fieldset>
-        </form>
+    <section class="submit-container">
+        <div class="btn-area">
+            <button type="button" onclick="generateFlexbox()" class="submit-flex-btn">Lets Flex!</button>
+        </div>
     </section>
+       
+
 
      <!--Preview Section-->
      <section class="section_3">
         <p>Preview</p>
         <div class="pre-layout-container">
             <div class="preview-div">
-                <div class="preview-div-cell"><p>Cell 1</p></div>
+                
             </div>
         </div>
 
