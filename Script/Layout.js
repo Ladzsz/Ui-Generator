@@ -2,36 +2,31 @@
 
 function generatelayout() {
 
-//getting all the container properties
-const containerStyles = {
-    display: document.getElementById('display').value,
-    flexDirection: document.getElementById('flex-direction').value,
-    flexWrap: document.getElementById('flex-wrap').value,
-    justifyContent: document.getElementById('justify-content').value,
-    alignItems: document.getElementById('align-items').value,
-    alignContent: document.getElementById('align-content').value,
-    gap: document.getElementById('gap').value
-};
+    //getting all the container properties
+    const containerStyles = {
+        flexDirection: document.getElementById('flex-direction').value,
+        justifyContent: document.getElementById('justify-content').value,
+        alignItems: document.getElementById('align-items').value,
+        gap: document.getElementById('gap').value
+    };
 
-//getting all the item properties
-const itemStyles = {
-    order: document.getElementById('order').value,
-    flexGrow: document.getElementById('flex-grow').value,
-    flexShrink: document.getElementById('flex-shrink').value,
-    flexBasis: document.getElementById('flex-basis').value,
-    alignSelf: document.getElementById('align-self').value
-};
+    //getting all the item properties
+    const itemStyles = {
+        order: parseInt(document.getElementById('order').value, 10) || 0, 
+        flexGrow: parseFloat(document.getElementById('flex-grow').value) || 0, 
+        flexShrink: parseFloat(document.getElementById('flex-shrink').value) || 0,
+        flexBasis: document.getElementById('flex-basis').value,
+        alignSelf: document.getElementById('align-self').value
+    };
 
 
-        //manipulating the preview div
-        const preview = document.querySelector('.preview-div');
-        preview.style.display = containerStyles.display;
-        preview.style.flexDirection = containerStyles.flexDirection;
-        preview.style.flexWrap = containerStyles.flexWrap;
-        preview.style.justifyContent = containerStyles.justifyContent;
-        preview.style.alignItems = containerStyles.alignItems;
-        preview.style.alignContent = containerStyles.alignContent;
-        preview.style.gap = containerStyles.gap;
+    //manipulating the preview div
+    const preview = document.querySelector('.preview-div');
+    preview.style.display = 'flex';
+    preview.style.flexDirection = containerStyles.flexDirection;
+    preview.style.justifyContent = containerStyles.justifyContent;
+    preview.style.alignItems = containerStyles.alignItems;
+    preview.style.gap = containerStyles.gap;
 
     //manipulating the cells
     const previewCell = document.querySelectorAll('.preview-div-cell');
@@ -44,6 +39,8 @@ const itemStyles = {
         cell.style.flexBasis = itemStyles.flexBasis;
         cell.style.alignSelf = itemStyles.alignSelf;
     });
+
+    console.log(itemStyles);
 
     //function to create and display amount of cells based off dropdown input
 
