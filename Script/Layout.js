@@ -33,6 +33,8 @@ function generatelayout() {
             }
         })
         
+
+        
     }
 
     //calling create cells
