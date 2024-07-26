@@ -184,6 +184,11 @@ margin-bottom: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
+    width: auto;
+    height: auto;
+    overflow-x: auto;
+    overflow-y: hidden;
+    max-width: 100%;
 }
 
 .preview-div {

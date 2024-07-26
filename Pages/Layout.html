@@ -39,11 +39,6 @@
                 <h2>Flex Container Properties:</h2>
 
                 <div class="flex-container-properties">
-                    <label for="display">Display:</label>
-                    <select id="display" name="display">
-                        <option value="flex">flex</option>
-                        <option value="inline-flex">inline-flex</option>
-                    </select>
             
                     <label for="flex-direction">Flex Direction:</label>
                     <select id="flex-direction" name="flex-direction">
@@ -51,13 +46,6 @@
                         <option value="row-reverse">row-reverse</option>
                         <option value="column">column</option>
                         <option value="column-reverse">column-reverse</option>
-                    </select>
-            
-                    <label for="flex-wrap">Flex Wrap:</label>
-                    <select id="flex-wrap" name="flex-wrap">
-                        <option value="nowrap">nowrap</option>
-                        <option value="wrap">wrap</option>
-                        <option value="wrap-reverse">wrap-reverse</option>
                     </select>
             
                     <label for="justify-content">Justify Content:</label>
@@ -77,16 +65,6 @@
                         <option value="flex-end">flex-end</option>
                         <option value="center">center</option>
                         <option value="baseline">baseline</option>
-                    </select>
-
-                    <label for="align-content">Align Content:</label>
-                    <select id="align-content" name="align-content">
-                        <option value="stretch">stretch</option>
-                        <option value="flex-start">flex-start</option>
-                        <option value="flex-end">flex-end</option>
-                        <option value="center">center</option>
-                        <option value="space-between">space-between</option>
-                        <option value="space-around">space-around</option>
                     </select>
 
                     <label for="gap">Gap:</label>
@@ -125,13 +103,23 @@
                     <fieldset class="cellsetter">
                         <label for="cells">Select Cell amount:</label>
                         <select id="cells">
-                            <option value="0">0</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                            <option value="6">6</option>
+                            <option value="1">1 Cell</option>
+                            <option value="2">2 Cells</option>
+                            <option value="3">3 Cells</option>
+                            <option value="4">4 Cells</option>
+                            <option value="5">5 Cells</option>
+                            <option value="6">6 Cells</option>
+                        </select>
+
+                         <!-- Flex Item Styling Controls -->
+                        <h2>Select Flex Item to style:</h2>
+                        <select id="cell-selector">
+                            <option value="0">Cell 1</option>
+                            <option value="1">Cell 2</option>
+                            <option value="2">Cell 3</option>
+                            <option value="3">Cell 4</option>
+                            <option value="4">Cell 5</option>
+                            <option value="5">Cell 6</option>
                         </select>
                     </fieldset>
             </fieldset>
@@ -142,7 +130,7 @@
 
     <section class="submit-container">
         <div class="btn-area">
-            <button type="button" onclick="generateFlexbox()" class="submit-flex-btn">Lets Flex!</button>
+            <button type="button" onclick="generatelayout()" class="submit-flex-btn">Lets Flex!</button>
         </div>
     </section>
        
@@ -153,6 +141,7 @@
         <p>Preview</p>
         <div class="pre-layout-container">
             <div class="preview-div">
+                <div class="preview-div-cell">Cell 1</div>
                 
             </div>
         </div>
