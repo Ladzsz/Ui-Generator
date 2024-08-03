@@ -29,6 +29,7 @@
                 <fieldset class="container_styles">
                     <legend>Flexbox Container Styles</legend>
     
+                    <!--Form groups for each style-->
                     <div class="form-group">
                         <label for="display">Display:</label>
                         <select id="display" name="display">
@@ -90,6 +91,8 @@
                             <option value="stretch">stretch</option>
                         </select>
                     </div>
+
+                    <!--Button to generate code and preview-->
                     <fieldset class="btn-area">
                         <div class="form-group">
                             <button type="button" onclick="generateCode()">Lets Flex!</button>
@@ -102,12 +105,15 @@
 
     <!--Preview section-->
     <section class="preview_sec">
+        <!-- Output section for displaying generated code -->
         <div class="output" id="output"></div>
 
+        <!-- Live preview container -->
         <div class="preview-container">
             <h2>Live Preview:</h2>
             <div id="preview-box" class="preview-box">
-                Flexbox Preview
+                <!-- Placeholder for the dynamically styled button -->
+                <button id="preview-button">Button</button>
             </div>
         </div>
     </section>
