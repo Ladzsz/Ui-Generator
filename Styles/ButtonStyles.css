@@ -40,20 +40,13 @@ body, html {
 /*styling header section*/
 
 header {
-    width: 100%;
-    height: 100px;
-    box-sizing: border-box;
-}
-.header_con {
     background-color: #6A0DAD;
-    padding: 10px;
-}
-
-.content {
+    padding: 30px;
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 250px;
+    justify-content: space-around; 
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
 }
 
 /*styling section 1*/
@@ -63,53 +56,65 @@ header {
     margin-top: 5%;
 }
 
-/*styling Form section*/
-
-.section_2 {
-    margin-top: 10%;
-}
-
-.inputs {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 45px;
-    padding: 10%;
-    border-radius: 24px;
-    border: solid #541c44 5px;
+/* Styling the form section */
+.button-form {
+    max-width: 600px;
+    margin: auto;
     background-color: #6A0DAD;
+    padding: 20px;
+    border: solid 4px #541c44;
+    border-radius: 24px;
 }
 
-label {
-    font-weight: bold;
-    font-size: 1.1em;
+/* Styling the fieldset */
+.button_styles {
+    border: none;
 }
 
-input {
-    padding: 5px;
-    border-radius: 36px;
+/* Styling the legend of the form */
+legend {
+    text-align: center;
 }
 
+/* Styling form groups */
+.form-group {
+    margin-bottom: 15px;
+}
+
+/* Styling labels */
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* Styling inputs */
+.form-group input, .form-group select {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+/* Styling the button area */
 .btn-area {
     text-align: center;
     border: none;
-    margin-top: 5%;
 }
 
-.generateButton {
-    color: black;
+/* Styling button */
+.form-btn {
+    padding: 10px 15px;
     background-color: #541c44;
-    padding: 15px;
-    border-radius: 48px;
-    font-size: 1.8em;
-    font-weight: bolder;
+    color: black;
+    border: none;
     cursor: pointer;
 }
 
-.generateButton:hover {
-    color: white;
+.form-btn:hover {
+    background-color: violet;
 }
 
-/*styling section 3*/
+
+/*styling Preview container*/
 
 .section_3 {
     text-align: center;
@@ -125,24 +130,22 @@ input {
     font-weight: bold;
 }
 
-.pre-btn-container {
-    margin-top: 2%;
-    border: 5px solid #541c44;
-    border-radius: 24px;
-    padding: 10%;
-    width: 10%;
-    height: 10%;
-    margin-bottom: 3%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.preview-container {
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    background-color: #e9ecef;
+    text-align: center;
 }
 
-.genrated-code {
-    margin-top: 3%;
-    display: flex;
-    gap: 40px;
-    margin-bottom: 5%;
+/*styling code output*/
+.generated-code {
+    margin-top: 20px;
+    white-space: pre-wrap;
+    background-color: #f8f9fa;
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: center;
 }
 
 /*styling footer section*/

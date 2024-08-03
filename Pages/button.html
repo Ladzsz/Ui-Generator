@@ -10,15 +10,10 @@
 <body>
     <!--Header Section-->
     <header>
-        <div class="header_con">
-            <div class="content">
-                <img src="../images/Logo.png" alt="logo image" width>
-                <h1>Button Generator Page</h1>
-                <h1 style="font-weight: bold; font-size: 1.5em;">London Mason</h1>
-                <a href="../index.html" class="HomePage" target="_blank">HomePage</a>
-                <a href="Contact.html" class="contact" target="_blank">Contact Me</a>
-            </div>
-        </div>
+        <img src="../images/Logo.png" alt="logo image" width>
+        <h1>Button Generator Page</h1>
+        <a href="../index.html" class="HomePage" target="_blank">HomePage</a>
+        <a href="Contact.html" class="contact" target="_blank">Contact Me</a>
     </header>
 
     <!--First section-->
@@ -26,68 +21,77 @@
         <h1 class="Top_text">Button Generator</h1>
     </section>
   
-    <!--Form section-->
-    <section class="section_2">
+   <!-- Form section -->
+<section class="button-form">
+    
+    <form id="button-form">
+        <!-- Button styles -->
+        <fieldset class="button_styles">
+            <legend>Customize Your Button</legend>
 
-        <form id="button-form">
-            <fieldset class="inputs">
-                <div class="input-group">
-                    <label for="text">Button Text:</label>
-                    <input type="text" id="text" name="text" value="Button">
-                </div>
-        
-                <div class="input-group">
-                    <label for="bgColor">Background Color:</label>
-                    <input type="color" id="bgColor" name="bgColor" value="#4CAF50">
-                </div>
-        
-                <div class="input-group">
-                    <label for="textColor">Text Color:</label>
-                    <input type="color" id="textColor" name="textColor" value="#FFFFFF">
-                </div>
-        
-                <div class="input-group">
-                    <label for="padding">Padding:</label>
-                    <input type="text" id="padding" name="padding" value="10px 20px">
-                </div>
-        
-                <div class="input-group">
-                    <label for="border">Border:</label>
-                    <input type="text" id="border" name="border" value="2px solid #4CAF50">
-                </div>
-        
-                <div class="input-group">
-                    <label for="borderRadius">Border Radius:</label>
-                    <input type="text" id="borderRadius" name="borderRadius" value="5px">
-                </div>
-        
-                <div class="input-group">
-                    <label for="fontSize">Font Size:</label>
-                    <input type="text" id="fontSize" name="fontSize" value="16px">
-                </div>
+            <!-- Form groups for each style -->
+            <div class="form-group">
+                <label for="text">Button Text:</label>
+                <input type="text" id="text" name="text" value="Button">
+            </div>
+    
+            <div class="form-group">
+                <label for="bgColor">Background Color:</label>
+                <input type="color" id="bgColor" name="bgColor" value="#4CAF50">
+            </div>
+    
+            <div class="form-group">
+                <label for="textColor">Text Color:</label>
+                <input type="color" id="textColor" name="textColor" value="#FFFFFF">
+            </div>
+    
+            <div class="form-group">
+                <label for="padding">Padding:</label>
+                <input type="text" id="padding" name="padding" value="10px 20px">
+            </div>
+    
+            <div class="form-group">
+                <label for="border">Border:</label>
+                <input type="text" id="border" name="border" value="2px solid #4CAF50">
+            </div>
+    
+            <div class="form-group">
+                <label for="borderRadius">Border Radius:</label>
+                <input type="text" id="borderRadius" name="borderRadius" value="5px">
+            </div>
+    
+            <div class="form-group">
+                <label for="fontSize">Font Size:</label>
+                <input type="text" id="fontSize" name="fontSize" value="16px">
+            </div>
 
-                <div class="input-group">
-                    <label for="fontWeight">Font Weight:</label>
-                    <input type="text" id="fontWeight" name="fontWeight" value="400">
-                </div>
-            </fieldset>
+            <div class="form-group">
+                <label for="fontWeight">Font Weight:</label>
+                <input type="text" id="fontWeight" name="fontWeight" value="400">
+            </div>
+        </fieldset>
 
-            <fieldset class="btn-area">
-                <button type="button" onclick="generateButton()" class="generateButton">Generate Button</button>
-            </fieldset>
-          </form>
-    </section>
+        <!--Button to generate code and preview-->
+        <fieldset class="btn-area">
+            <button type="button" class="form-btn" onclick="generateButton()">Generate Button</button>
+        </fieldset>
+    </form>
+</section>
 
-    <!--Preview Section-->
-    <section class="section_3">
-        <p>Preview</p>
-        <div class="pre-btn-container">
-             <button id="preview-button">Button</button>
+
+    <!-- Preview section -->
+    <section class="preview_sec">
+
+        <!-- Live preview container -->
+        <div class="preview-container">
+            <h2>Live Preview:</h2>
+            <div id="preview-box" class="preview-box">
+                <button id="preview-button">Button</button>
+            </div>
         </div>
 
-        <p>Generated Code</p>
-        <div class="genrated-code">
-
+        <!-- Generated code sections -->
+        <div class="generated-code">
             <div class="gencode-html">
                 <h2>Generated HTML</h2>
                 <div class="code" id="generated-html"></div>

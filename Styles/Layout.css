@@ -40,20 +40,13 @@ body, html {
 /*styling header section*/
 
 header {
-    width: 100%;
-    height: 100px;
-    box-sizing: border-box;
-}
-.header_con {
     background-color: #6A0DAD;
-    padding: 10px;
-}
-
-.content {
+    padding: 30px;
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 250px;
+    justify-content: space-around; 
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
 }
 
 /*styling section 1*/
@@ -62,6 +55,109 @@ header {
     font-size: 2.1em;
     margin-top: 5%;
     margin-bottom: 5%;
+}
+
+/*styling the form section*/
+.flexbox-form {
+    max-width: 600px;
+    margin: auto;
+    background-color: #6A0DAD;
+    padding: 20px;
+    border: solid 4px #541c44;
+    border-radius: 24px;
+}
+
+/*styling the fieldset*/
+
+.container_styles {
+    border: none;
+}
+
+/*styling the legend of the form*/
+
+legend {
+    text-align: center;
+}
+/*styling from groups*/
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+/*styling labels*/
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+/*styling inputs*/
+
+.form-group input, .form-group select {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+/*styling the button area*/
+
+.btn-area {
+    text-align: center;
+    border: none;
+}
+/*styling button*/
+
+.form-group button {
+    padding: 10px 15px;
+    background-color: #541c44;
+    color: black;
+    border: none;
+    cursor: pointer;
+}
+
+.form-group button:hover {
+    background-color: violet;
+}
+
+/* Preview Section Styling */
+.preview_sec {
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    background-color: #e9ecef;
+}
+
+/*styling the preview container*/
+
+.preview-container {
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+}
+
+/*styling the preview box*/
+.preview-box {
+    width: 100%;
+    height: 200px;
+    background-color: #f8f9fa;
+    border: 1px solid #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/*styling the generated code*/
+
+.generated-code {
+    margin-top: 20px;
+    white-space: pre-wrap;
+    background-color: #f8f9fa;
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: center;
 }
 
 /*styling footer section*/

@@ -11,23 +11,16 @@ body, html {
     min-height: 100vh;
   }
 
-/*styling the header*/
+/*styling header section*/
 
 header {
-    width: 100%;
-    height: 100px;
-    box-sizing: border-box;
-}
-.header_con {
     background-color: #6A0DAD;
-    padding: 10px;
-}
-
-.content {
+    padding: 30px;
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 250px;
+    justify-content: space-around; 
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
 }
 
 /*styling logo*/

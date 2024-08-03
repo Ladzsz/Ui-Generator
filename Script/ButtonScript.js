@@ -34,6 +34,7 @@ function generateButton() {
     font-weight: ${fontWeight}
     }`;
 
-    document.getElementById('generated-html').innerHTML = `<textarea rows="10" cols="50" style="background-color: #1E1E1E; color: #4EC9B0; padding: 20px;">${htmlCode}</textarea>`;
-    document.getElementById('generated-css').innerHTML = `<textarea rows="10" cols="50" style="background-color: #1E1E1E; color: #4EC9B0; padding: 20px;">${cssCode}</textarea>`;
+    // Updating the code display areas
+    document.getElementById('generated-html').textContent = htmlCode;
+    document.getElementById('generated-css').textContent = cssCode;
 }
