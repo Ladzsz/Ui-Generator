@@ -10,15 +10,10 @@
 <body>
     <!--Header Section-->
     <header>
-        <div class="header_con">
-            <div class="content">
-                <img src="../images/Logo.png" alt="logo image" width>
-                <h1>Layout Generator Page</h1>
-                <h1 style="font-weight: bold; font-size: 1.5em;">London Mason</h1>
-                <a href="../index.html" class="HomePage" target="_blank">HomePage</a>
-                <a href="Contact.html" class="contact" target="_blank">Contact Me</a>
-            </div>
-        </div>
+        <img src="../images/Logo.png" alt="logo image" width>
+        <h1>Layout Generator Page</h1>
+        <a href="../index.html" class="HomePage" target="_blank">HomePage</a>
+        <a href="Contact.html" class="contact" target="_blank">Contact Me</a>
     </header>
     
     <!--First section-->
@@ -26,6 +21,96 @@
         <h1 class="Top_text"> Flex Layout Generator</h1>
     </section>
 
+    <!--Form section-->
+    <section class="flexbox-form">
+        <form>
+            <!--Container styles-->
+            <fieldset class="container_styles">
+                <fieldset class="container_styles">
+                    <legend>Flexbox Container Styles</legend>
+    
+                    <div class="form-group">
+                        <label for="display">Display:</label>
+                        <select id="display" name="display">
+                            <option value="flex">flex</option>
+                            <option value="inline-flex">inline-flex</option>
+                        </select>
+                    </div>
+    
+                    <div class="form-group">
+                        <label for="flex-direction">Flex Direction:</label>
+                        <select id="flex-direction" name="flex-direction">
+                            <option value="row">row</option>
+                            <option value="row-reverse">row-reverse</option>
+                            <option value="column">column</option>
+                            <option value="column-reverse">column-reverse</option>
+                        </select>
+                    </div>
+    
+                    <div class="form-group">
+                        <label for="flex-wrap">Flex Wrap:</label>
+                        <select id="flex-wrap" name="flex-wrap">
+                            <option value="nowrap">nowrap</option>
+                            <option value="wrap">wrap</option>
+                            <option value="wrap-reverse">wrap-reverse</option>
+                        </select>
+                    </div>
+    
+                    <div class="form-group">
+                        <label for="justify-content">Justify Content:</label>
+                        <select id="justify-content" name="justify-content">
+                            <option value="flex-start">flex-start</option>
+                            <option value="center">center</option>
+                            <option value="flex-end">flex-end</option>
+                            <option value="space-between">space-between</option>
+                            <option value="space-around">space-around</option>
+                            <option value="space-evenly">space-evenly</option>
+                        </select>
+                    </div>
+    
+                    <div class="form-group">
+                        <label for="align-items">Align Items:</label>
+                        <select id="align-items" name="align-items">
+                            <option value="flex-start">flex-start</option>
+                            <option value="center">center</option>
+                            <option value="flex-end">flex-end</option>
+                            <option value="baseline">baseline</option>
+                            <option value="stretch">stretch</option>
+                        </select>
+                    </div>
+    
+                    <div class="form-group">
+                        <label for="align-content">Align Content:</label>
+                        <select id="align-content" name="align-content">
+                            <option value="flex-start">flex-start</option>
+                            <option value="center">center</option>
+                            <option value="flex-end">flex-end</option>
+                            <option value="space-between">space-between</option>
+                            <option value="space-around">space-around</option>
+                            <option value="stretch">stretch</option>
+                        </select>
+                    </div>
+                    <fieldset class="btn-area">
+                        <div class="form-group">
+                            <button type="button" onclick="generateCode()">Lets Flex!</button>
+                        </div>
+                    </fieldset>
+                </fieldset>
+            </fieldset>
+        </form>
+    </section>
+
+    <!--Preview section-->
+    <section class="preview_sec">
+        <div class="output" id="output"></div>
+
+        <div class="preview-container">
+            <h2>Live Preview:</h2>
+            <div id="preview-box" class="preview-box">
+                Flexbox Preview
+            </div>
+        </div>
+    </section>
     <!--Footer Section-->
     <footer>
         <div class="footer_con">
