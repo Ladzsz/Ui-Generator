@@ -101,16 +101,16 @@ legend {
 }
 
 /* Styling button */
-.form-group button {
+.form-btn {
     padding: 10px 15px;
-    background-color: #007BFF;
-    color: white;
+    background-color: #541c44;
+    color: black;
     border: none;
     cursor: pointer;
 }
 
-.form-group button:hover {
-    background-color: #0056b3;
+.form-btn:hover {
+    background-color: violet;
 }
 
 
