@@ -118,24 +118,25 @@ legend {
     background-color: #0056b3;
 }
 
-/*styling code output*/
-.output {
-    margin-top: 20px;
-    white-space: pre-wrap;
-    background-color: #f8f9fa;
-    padding: 10px;
-    border: 1px solid #ddd;
-}
-
-/*styling preview container and elmements*/
-
-.preview-container {
+/* Preview Section Styling */
+.preview_sec {
     margin-top: 20px;
     padding: 20px;
     border: 1px solid #ddd;
     background-color: #e9ecef;
 }
 
+/*styling the preview container*/
+
+.preview-container {
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+}
+
+/*styling the preview box*/
 .preview-box {
     width: 100%;
     height: 200px;
@@ -144,6 +145,19 @@ legend {
     display: flex;
     align-items: center;
     justify-content: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/*styling the generated code*/
+
+.generated-code {
+    margin-top: 20px;
+    white-space: pre-wrap;
+    background-color: #f8f9fa;
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: center;
 }
 
 /*styling footer section*/

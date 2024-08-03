@@ -1,6 +1,5 @@
 function generateCode() {
-
-    //grabbing values of dropdowns
+    // Grabbing values from dropdowns
     const display = document.getElementById('display').value;
     const flexDirection = document.getElementById('flex-direction').value;
     const flexWrap = document.getElementById('flex-wrap').value;
@@ -8,19 +7,7 @@ function generateCode() {
     const alignItems = document.getElementById('align-items').value;
     const alignContent = document.getElementById('align-content').value;
 
-    // Displaying the previews styles
-        const cssCode = `
-    .container {
-    display: ${display};
-    flex-direction: ${flexDirection};
-    flex-wrap: ${flexWrap};
-    justify-content: ${justifyContent};
-    align-items: ${alignItems};
-    align-content: ${alignContent};
-    }
-    `;
-
-    // Update CSS preview
+    // Displaying the preview styles
     const previewBox = document.getElementById('preview-box');
     previewBox.style.display = display;
     previewBox.style.flexDirection = flexDirection;
@@ -29,6 +16,19 @@ function generateCode() {
     previewBox.style.alignItems = alignItems;
     previewBox.style.alignContent = alignContent;
 
-    // Display generated CSS code
-    document.getElementById('output').textContent = cssCode;
+    // Generating HTML and CSS code
+    const htmlCode = `<div id="preview-box">Preview Box</div>`;
+
+    const cssCode = `#preview-box {
+    display: ${display};
+    flex-direction: ${flexDirection};
+    flex-wrap: ${flexWrap};
+    justify-content: ${justifyContent};
+    align-items: ${alignItems};
+    align-content: ${alignContent};
+    }`;
+
+    // Displaying the generated code
+    document.getElementById('generated-html').textContent = htmlCode;
+    document.getElementById('generated-css').textContent = cssCode;
 }
