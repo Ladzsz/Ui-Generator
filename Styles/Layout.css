@@ -112,10 +112,13 @@ legend {
     color: black;
     border: none;
     cursor: pointer;
+    border-radius: 24px;
+    font-weight: bold;
+    font-size: 0.9em;
 }
 
 .form-group button:hover {
-    background-color: violet;
+    color: white;
 }
 
 /* Preview Section Styling */
@@ -139,7 +142,6 @@ legend {
 /*styling the preview box*/
 .preview-box {
     width: 100%;
-    height: 200px;
     background-color: #f8f9fa;
     border: 1px solid #ddd;
     display: flex;
@@ -147,6 +149,43 @@ legend {
     justify-content: center;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: auto;
+}
+
+/*styling the preview legend*/
+
+.preview-legend {
+    display: flex;
+    justify-content: space-between;
+}
+
+.preview-legend > h2 {
+    margin: 0;
+}
+
+/*styling preview legend buttons*/
+
+.remove-add-btns > button {
+    padding: 10px 15px;
+    background-color: #541c44;
+    color: black;
+    border: none;
+    cursor: pointer;
+    border-radius: 24px;
+    font-weight: bold;
+    font-size: 0.9em;
+}
+
+.remove-add-btns > button:hover {
+    color: white;
+}
+
+/*styling the preview divs*/
+
+#preview-box > p {
+    background-color: darkgray;
+    border-radius: 16px;
+    padding: 10px;
 }
 
 /*styling the generated code*/
