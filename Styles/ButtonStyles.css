@@ -107,10 +107,13 @@ legend {
     color: black;
     border: none;
     cursor: pointer;
+    font-weight: bold;
+    font-size: 0.9em;
+    border-radius: 16px;
 }
 
 .form-btn:hover {
-    background-color: violet;
+    color: white;
 }
 
 
