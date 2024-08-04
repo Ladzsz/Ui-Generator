@@ -23,7 +23,7 @@
 
     <!--Form section-->
     <section class="flexbox-form">
-        <form>
+        <form id="flex-form" action="#" onsubmit="handleSubmit(event)">
             <!--Container styles-->
             <fieldset class="container_styles">
                 <fieldset class="container_styles">
@@ -92,6 +92,11 @@
                         </select>
                     </div>
 
+                    <div class="form-group">
+                        <label for="gap">Gap (px):</label>
+                        <input type="number" id="gap" name="gap" min="0" placeholder="e.g, 20, 40">
+                    </div>
+
                     <!--Button to generate code and preview-->
                     <fieldset class="btn-area">
                         <div class="form-group">
@@ -106,9 +111,15 @@
     <section class="preview_sec">
         <!-- Live preview container -->
         <div class="preview-container">
-            <h2>Live Preview:</h2>
+            <div class="preview-legend">
+                <h2>Live Preview:</h2>
+                <div class="remove-add-btns">
+                    <button type="button" onclick="addchildElements()">Add Item</button>
+                    <button type="button" onclick="removechildElements()">Remove Item</button>
+                </div>
+            </div>
             <div id="preview-box" class="preview-box">
-                Live Flex
+                <p>Cell 1</p>
             </div>
         </div>
     
