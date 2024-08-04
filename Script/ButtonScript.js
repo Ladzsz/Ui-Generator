@@ -38,3 +38,9 @@ function generateButton() {
     document.getElementById('generated-html').textContent = htmlCode;
     document.getElementById('generated-css').textContent = cssCode;
 }
+
+// Handle form submission
+function handleSubmit(event) {
+    event.preventDefault(); 
+    generateButton(); 
+}
