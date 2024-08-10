@@ -98,6 +98,12 @@ legend {
     box-sizing: border-box;
 }
 
+/*styling the item properties part of form*/
+
+#item-properties {
+    border: none;
+}
+
 /*styling the button area*/
 
 .btn-area {
@@ -150,6 +156,10 @@ legend {
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     overflow: auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 5px;
+    padding-right: 5px;
 }
 
 /*styling the preview legend*/
@@ -186,6 +196,12 @@ legend {
     background-color: darkgray;
     border-radius: 16px;
     padding: 10px;
+    cursor: pointer;
+    margin: 0;
+}
+
+#preview-box > p:hover {
+    background-color: lightgray;
 }
 
 /*styling the generated code*/
