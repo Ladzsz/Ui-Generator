@@ -18,7 +18,28 @@ function generateCode() {
     previewBox.style.justifyContent = justifyContent;
     previewBox.style.alignItems = alignItems;
     previewBox.style.alignContent = alignContent;
-    previewBox.style.gap = gap + 'px';
+    previewBox.style.gap = gap;
+
+    // Grabbing values from item properties form
+    const order = document.getElementById('order').value;
+    const flexGrow = document.getElementById('flex-grow').value;
+    const flexShrink = document.getElementById('flex-shrink').value;
+    const flexBasis = document.getElementById('flex-basis').value;
+    const alignSelf = document.getElementById('align-self').value;
+    const margin = document.getElementById('margin').value;
+
+    // Get the selected item
+    const selectedItem = document.querySelector('.boxItem.selected');
+
+    //add styles to the selcted item
+    if (selectedItem) {
+        selectedItem.style.order = order;
+        selectedItem.style.flexGrow = flexGrow;
+        selectedItem.style.flexShrink = flexShrink;
+        selectedItem.style.flexBasis = flexBasis;
+        selectedItem.style.alignSelf = alignSelf;
+        selectedItem.style.margin = margin; 
+    }
 
     // Generating HTML and CSS code
     //grabbing all p elements in preview box
@@ -27,10 +48,11 @@ function generateCode() {
     //setting up dynamic html code
     let htmlCode = '<div id="preview-box">\n';
     items.forEach((item, index) => {
-        htmlCode += `<p>Cell ${index + 1}</p>\n`;
+        htmlCode += `<p class="Cell-${index + 1}">Cell ${index + 1}</p>\n`;
     });
     htmlCode += '</div>';
 
+    //setting up the css code for the container styles
     const cssCode = `#preview-box {
     display: ${display};
     flex-direction: ${flexDirection};
@@ -41,10 +63,61 @@ function generateCode() {
     gap: ${gap}px;
     }`;
 
+    //setting up the css for the container items
+    let itemCSScode = '';
+    if (selectedItem) {
+        itemCSScode = `.Cell-Name {\n` +
+            `  order: ${order};\n` +
+            `  flex-grow: ${flexGrow};\n` +
+            `  flex-shrink: ${flexShrink};\n` +
+            `  flex-basis: ${flexBasis};\n` +
+            `  align-self: ${alignSelf};\n` +
+            `  margin: ${margin}px;\n` +
+            `}\n`;
+    }
+
     // Displaying the generated code
     document.getElementById('generated-html').textContent = htmlCode;
     document.getElementById('generated-css').textContent = cssCode;
+    document.getElementById('item-css').textContent = itemCSScode
 }
+
+// Function to update the color of selected items
+function updateSelectedItemColor() {
+    // Get all items
+    const items = document.querySelectorAll('.boxItem');
+    
+    // Reset color for all items
+    items.forEach(item => {
+        item.style.backgroundColor = "";
+    });
+    
+    // Apply selected color to the currently selected item
+    const selectedItem = document.querySelector('.boxItem.selected');
+    if (selectedItem) {
+        selectedItem.style.backgroundColor = "#ADD8E6"; 
+    }
+}
+
+// Function to handle item clicks
+function handleItemClick(event) {
+    //grabbing the items
+    const items = document.querySelectorAll('.boxItem');
+    //removing item class for non selected items
+    items.forEach(item => item.classList.remove('selected')); 
+    ///adding class to the selcted item
+    event.target.classList.add('selected'); 
+
+    updateSelectedItemColor();
+
+    generateCode(); 
+}
+
+//event listener to handle the item click
+const boxItems = document.querySelectorAll('.boxItem');
+boxItems.forEach(item => {
+    item.addEventListener('click', handleItemClick);
+});
 
 //function to create child elements in preview upon user click
 function addchildElements() {
@@ -56,9 +129,11 @@ function addchildElements() {
 
     // Set the text content of the new item
     newItem.textContent = "Cell " + (itemCount + 1);
+    newItem.classList.add("boxItem");
 
     // Add the new item to the preview box
     document.getElementById("preview-box").appendChild(newItem);
+    newItem.addEventListener('click', handleItemClick);
 }
 
 //function to remove child elements upon user click
@@ -78,4 +153,3 @@ function handleSubmit(event) {
     event.preventDefault(); 
     generateCode(); 
 }
-

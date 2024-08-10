@@ -27,9 +27,10 @@
             <!--Container styles-->
             <fieldset class="container_styles">
                 <fieldset class="container_styles">
-                    <legend>Flexbox Container Styles</legend>
+                    <legend><h3>Flexbox Container Styles</h3></legend>
     
                     <!--Form groups for each style-->
+                    <!--display-->
                     <div class="form-group">
                         <label for="display">Display:</label>
                         <select id="display" name="display">
@@ -37,7 +38,8 @@
                             <option value="inline-flex">inline-flex</option>
                         </select>
                     </div>
-    
+                    
+                    <!--flex direction-->
                     <div class="form-group">
                         <label for="flex-direction">Flex Direction:</label>
                         <select id="flex-direction" name="flex-direction">
@@ -47,7 +49,8 @@
                             <option value="column-reverse">column-reverse</option>
                         </select>
                     </div>
-    
+
+                    <!--flex wrap-->
                     <div class="form-group">
                         <label for="flex-wrap">Flex Wrap:</label>
                         <select id="flex-wrap" name="flex-wrap">
@@ -57,6 +60,7 @@
                         </select>
                     </div>
     
+                    <!--justify content-->
                     <div class="form-group">
                         <label for="justify-content">Justify Content:</label>
                         <select id="justify-content" name="justify-content">
@@ -69,6 +73,7 @@
                         </select>
                     </div>
     
+                    <!--align items-->
                     <div class="form-group">
                         <label for="align-items">Align Items:</label>
                         <select id="align-items" name="align-items">
@@ -80,6 +85,7 @@
                         </select>
                     </div>
     
+                    <!--align content-->
                     <div class="form-group">
                         <label for="align-content">Align Content:</label>
                         <select id="align-content" name="align-content">
@@ -92,10 +98,58 @@
                         </select>
                     </div>
 
+                    <!--Gap-->
                     <div class="form-group">
-                        <label for="gap">Gap (px):</label>
-                        <input type="number" id="gap" name="gap" min="0" placeholder="e.g, 20, 40">
+                        <label for="gap">Gap:</label>
+                        <input type="text" id="gap" name="gap" min="0" placeholder="e.g, 20px, 40%">
                     </div>
+
+                    <!--Item properties-->
+                    <!--Order-->
+                    <fieldset id="item-properties">
+                        <legend><h3>Selected Item Properties</h3></legend>
+                        <div class="form-group">
+                            <label for="order">Order:</label>
+                            <input type="number" id="order" name="order" value="0">
+                        </div>
+                
+                        <!--flex grow-->
+                        <div class="form-group">
+                            <label for="flex-grow">Flex Grow:</label>
+                            <input type="number" id="flex-grow" name="flex-grow" value="0" min="0">
+                        </div>
+                
+                        <!--flex shrink-->
+                        <div class="form-group">
+                            <label for="flex-shrink">Flex Shrink:</label>
+                            <input type="number" id="flex-shrink" name="flex-shrink" value="1" min="0">
+                        </div>
+                
+                        <!--flex basis-->
+                        <div class="form-group">
+                            <label for="flex-basis">Flex Basis:</label>
+                            <input type="text" id="flex-basis" name="flex-basis" value="auto" placeholder="e.g auto, 20px, 30%">
+                        </div>
+                
+                        <!--align self-->
+                        <div class="form-group">
+                            <label for="align-self">Align Self:</label>
+                            <select id="align-self" name="align-self">
+                                <option value="auto">auto</option>
+                                <option value="flex-start">flex-start</option>
+                                <option value="center">center</option>
+                                <option value="flex-end">flex-end</option>
+                                <option value="baseline">baseline</option>
+                                <option value="stretch">stretch</option>
+                            </select>
+                        </div>
+                
+                        <!--margin-->
+                        <div class="form-group">
+                            <label for="margin">Margin:</label>
+                            <input type="text" id="margin" name="margin" placeholder="e.g 20px, 30%">
+                        </div>
+                    </fieldset>
 
                     <!--Button to generate code and preview-->
                     <fieldset class="btn-area">
@@ -119,7 +173,7 @@
                 </div>
             </div>
             <div id="preview-box" class="preview-box">
-                <p>Cell 1</p>
+                <p class="boxItem">Cell 1</p>
             </div>
         </div>
     
@@ -133,6 +187,9 @@
             <div class="gencode-css">
                 <h2>Generated CSS</h2>
                 <div class="code" id="generated-css"></div>
+                <br>
+                <br>
+                <div class="code" id="item-css"></div>
             </div>
         </div>
     </section>
