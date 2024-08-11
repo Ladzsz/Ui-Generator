@@ -145,10 +145,16 @@ legend {
 .generated-code {
     margin-top: 20px;
     white-space: pre-wrap;
-    background-color: #f8f9fa;
+    background-color: #1E1E1E;
     padding: 10px;
     border: 1px solid #ddd;
     text-align: center;
+}
+
+/*styling the generated code text*/
+
+.code, .gen-caption {
+    color: #6A9955;
 }
 
 /*styling footer section*/
