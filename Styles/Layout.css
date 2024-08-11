@@ -43,6 +43,7 @@ header {
     background-color: #6A0DAD;
     padding: 30px;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-around; 
     border-bottom-left-radius: 16px;
@@ -211,7 +212,6 @@ legend {
     white-space: pre-wrap;
     background-color: #1E1E1E;
     padding: 10px;
-    border: 1px solid #ddd;
     text-align: center;
 }
 
