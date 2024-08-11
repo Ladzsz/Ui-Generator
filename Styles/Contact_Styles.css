@@ -63,28 +63,71 @@ font-size: 2.8em;
 /*styling second section*/
 
 .Second_section {
-    margin-top: 200px;
+    margin-top: 5%;
     display: flex;
-    gap: 50px;
+    gap: 20px;
     justify-content: center;
-}
-
-.email > h2, .github > h2, .phonenumber > h2 {
+    flex-direction: column;
     text-align: center;
 }
 
+/* Styling for the headers */
+.email > h2, .github > h2, .phonenumber > h2 {
+    text-align: center;
+    font-size: 1.5em;
+}
+
+/* Styling for the links */
 .email > a, .github > a, .phonenumber > a {
     color: black;
     background-color: #541c44;
-    padding: 15px;
+    padding: 10px 20px; 
     border-radius: 48px;
-    font-size: 2.9em;
+    font-size: 1.5em; 
     font-weight: bolder;
     text-align: center;
+    display: inline-block; 
+    text-decoration: none; 
 }
 
 .Second_section > div > a:hover {
     color: white;
+}
+
+/* Responsive styles */
+
+/* Styles for medium screens */
+@media (max-width: 1200px) {
+    .Second_section {
+        gap: 30px;
+    }
+    .email > a, .github > a, .phonenumber > a {
+        font-size: 2em; 
+        padding: 12px 24px;
+    }
+}
+
+/* Styles for small screens */
+@media (max-width: 768px) {
+    .Second_section {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .email > a, .github > a, .phonenumber > a {
+        font-size: 1.8em; 
+        padding: 10px 20px; 
+    }
+}
+
+/* Styles for Super small screens */
+@media (max-width: 480px) {
+    .Second_section {
+        gap: 15px; 
+    }
+    .email > a, .github > a, .phonenumber > a {
+        font-size: 1.5em; 
+        padding: 8px 16px; 
+    }
 }
 
 /*styling the footer */

@@ -63,18 +63,28 @@ function generateCode() {
     gap: ${gap}px;
     }`;
 
-    //setting up the css for the container items
-    let itemCSScode = '';
-    if (selectedItem) {
-        itemCSScode = `.Cell-Name {\n` +
-            `  order: ${order};\n` +
-            `  flex-grow: ${flexGrow};\n` +
-            `  flex-shrink: ${flexShrink};\n` +
-            `  flex-basis: ${flexBasis};\n` +
-            `  align-self: ${alignSelf};\n` +
-            `  margin: ${margin}px;\n` +
-            `}\n`;
-    }
+   // Generating CSS for each child element
+   let itemCSScode = '';
+   items.forEach((item, index) => {
+       const order = item.style.order || '0';
+       const flexGrow = item.style.flexGrow || '0';
+       const flexShrink = item.style.flexShrink || '1';
+       const flexBasis = item.style.flexBasis || 'auto';
+       const alignSelf = item.style.alignSelf || 'auto';
+       const margin = item.style.margin || '0px';
+
+       // Generate CSS only if the styles differ from the defaults
+       if (order !== '0' || flexGrow !== '0' || flexShrink !== '1' || flexBasis !== 'auto' || alignSelf !== 'auto' || margin !== '0px') {
+           itemCSScode += `.Cell-${index + 1} {\n` +
+               `  order: ${order};\n` +
+               `  flex-grow: ${flexGrow};\n` +
+               `  flex-shrink: ${flexShrink};\n` +
+               `  flex-basis: ${flexBasis};\n` +
+               `  align-self: ${alignSelf};\n` +
+               `  margin: ${margin};\n` +
+               `}\n\n\n\n`;
+       }
+   });
 
     // Displaying the generated code
     document.getElementById('generated-html').textContent = htmlCode;

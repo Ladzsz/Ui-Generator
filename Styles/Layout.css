@@ -43,6 +43,7 @@ header {
     background-color: #6A0DAD;
     padding: 30px;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-around; 
     border-bottom-left-radius: 16px;
@@ -209,10 +210,15 @@ legend {
 .generated-code {
     margin-top: 20px;
     white-space: pre-wrap;
-    background-color: #f8f9fa;
+    background-color: #1E1E1E;
     padding: 10px;
-    border: 1px solid #ddd;
     text-align: center;
+}
+
+/*styling the generated code text*/
+
+.code, .gen-caption {
+    color: #6A9955;
 }
 
 /*styling footer section*/
