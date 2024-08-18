@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Generator</title>
+    <link rel="stylesheet" href="../global_style.css">
+    <link rel="stylesheet" href="../Styles/grid.css">
+</head>
+<body>
+    <!--Header section-->
+    <header>
+        <img src="../images/Logo.png" alt="logo image" width>
+        <h1>Grid Generator</h1>
+        <a href="../index.html" class="HomePage" target="_blank">HomePage</a>
+        <a href="Contact.html" class="contact" target="_blank">Contact Me</a>
+    </header>
+    
+    <!--First section-->
+    <section class="section_1">
+        <h1 class="Top_text"> Grid Layout Generator</h1>
+    </section>
+
+    <!--Form section-->
+    <section class="grid-layout-form">
+        <form id="grid-form" action="#" onsubmit="handleSubmit(event)">
+            <!--Container styles-->
+            <fieldset class="container_styles">
+                <legend><h3>Grid Container Styles</h3></legend>
+
+                <!--Form groups for each style-->
+                <!--display-->
+                <div class="form-group">
+                    <label for="display">Display:</label>
+                    <select id="display" name="display">
+                        <option value="grid">grid</option>
+                        <option value="inline-grid">inline-grid</option>
+                    </select>
+                </div>
+                
+                <!--grid template columns-->
+                <div class="form-group">
+                    <label for="grid-template-columns">Grid Template Columns:</label>
+                    <input type="text" id="grid-template-columns" name="grid-template-columns" placeholder="e.g., 1fr 1fr 1fr">
+                </div>
+
+                <!--grid template rows-->
+                <div class="form-group">
+                    <label for="grid-template-rows">Grid Template Rows:</label>
+                    <input type="text" id="grid-template-rows" name="grid-template-rows" placeholder="e.g., 100px auto 100px">
+                </div>
+
+                <!--grid column gap-->
+                <div class="form-group">
+                    <label for="grid-column-gap">Grid Column Gap:</label>
+                    <input type="text" id="grid-column-gap" name="grid-column-gap" placeholder="e.g., 20px">
+                </div>
+
+                <!--grid row gap-->
+                <div class="form-group">
+                    <label for="grid-row-gap">Grid Row Gap:</label>
+                    <input type="text" id="grid-row-gap" name="grid-row-gap" placeholder="e.g., 20px">
+                </div>
+
+                <!--justify items-->
+                <div class="form-group">
+                    <label for="justify-items">Justify Items:</label>
+                    <select id="justify-items" name="justify-items">
+                        <option value="start">start</option>
+                        <option value="center">center</option>
+                        <option value="end">end</option>
+                        <option value="stretch">stretch</option>
+                    </select>
+                </div>
+
+                <!--align items-->
+                <div class="form-group">
+                    <label for="align-items">Align Items:</label>
+                    <select id="align-items" name="align-items">
+                        <option value="start">start</option>
+                        <option value="center">center</option>
+                        <option value="end">end</option>
+                        <option value="stretch">stretch</option>
+                    </select>
+                </div>
+
+                <!--justify content-->
+                <div class="form-group">
+                    <label for="justify-content">Justify Content:</label>
+                    <select id="justify-content" name="justify-content">
+                        <option value="start">start</option>
+                        <option value="center">center</option>
+                        <option value="end">end</option>
+                        <option value="space-between">space-between</option>
+                        <option value="space-around">space-around</option>
+                        <option value="space-evenly">space-evenly</option>
+                    </select>
+                </div>
+
+                <!--align content-->
+                <div class="form-group">
+                    <label for="align-content">Align Content:</label>
+                    <select id="align-content" name="align-content">
+                        <option value="start">start</option>
+                        <option value="center">center</option>
+                        <option value="end">end</option>
+                        <option value="space-between">space-between</option>
+                        <option value="space-around">space-around</option>
+                        <option value="stretch">stretch</option>
+                    </select>
+                </div>
+
+                <!--Gap-->
+                <div class="form-group">
+                    <label for="gap">Gap:</label>
+                    <input type="text" id="gap" name="gap" min="0" placeholder="e.g., 20px">
+                </div>
+
+                <!--Item properties-->
+                <fieldset id="item-properties">
+                    <legend><h3>Selected Item Properties</h3></legend>
+                    
+                    <!--Order-->
+                    <div class="form-group">
+                        <label for="order">Order:</label>
+                        <input type="number" id="order" name="order" value="0">
+                    </div>
+
+                    <!--grid-column-->
+                    <div class="form-group">
+                        <label for="grid-column">Grid Column:</label>
+                        <input type="text" id="grid-column" name="grid-column" placeholder="e.g., 1 / span 2, 2 / 4">
+                    </div>
+
+                    <!--grid-row-->
+                    <div class="form-group">
+                        <label for="grid-row">Grid Row:</label>
+                        <input type="text" id="grid-row" name="grid-row" placeholder="e.g., 1 / 3, auto">
+                    </div>
+
+                    <!--grid-area-->
+                    <div class="form-group">
+                        <label for="grid-area">Grid Area:</label>
+                        <input type="text" id="grid-area" name="grid-area" placeholder="e.g., header, 1 / 1 / 2 / 3">
+                    </div>
+
+                    <!--justify self-->
+                    <div class="form-group">
+                        <label for="justify-self">Justify Self:</label>
+                        <select id="justify-self" name="justify-self">
+                            <option value="auto">auto</option>
+                            <option value="start">start</option>
+                            <option value="center">center</option>
+                            <option value="end">end</option>
+                            <option value="stretch">stretch</option>
+                        </select>
+                    </div>
+
+                    <!--align self-->
+                    <div class="form-group">
+                        <label for="align-self">Align Self:</label>
+                        <select id="align-self" name="align-self">
+                            <option value="auto">auto</option>
+                            <option value="start">start</option>
+                            <option value="center">center</option>
+                            <option value="end">end</option>
+                            <option value="stretch">stretch</option>
+                        </select>
+                    </div>
+
+                    <!--margin-->
+                    <div class="form-group">
+                        <label for="margin">Margin:</label>
+                        <input type="text" id="margin" name="margin" placeholder="e.g., 20px, 30%">
+                    </div>
+                </fieldset>
+
+                <!--Button to generate code and preview-->
+                <fieldset class="btn-area">
+                    <div class="form-group">
+                        <button type="submit">Create Grid!</button>
+                    </div>
+                </fieldset>
+            </fieldset>
+        </form>
+    </section>
+
+    <section class="preview_sec">
+        <!-- Live preview container -->
+        <div class="preview-container">
+            <div class="preview-legend">
+                <h2>Live Preview:</h2>
+                <div class="remove-add-btns">
+                    <button type="button" onclick="addchildElements()">Add Item</button>
+                    <button type="button" onclick="removechildElements()">Remove Item</button>
+                </div>
+            </div>
+            <div id="preview-box" class="preview-box">
+                <p class="boxItem">Cell 1</p>
+            </div>
+        </div>
+    
+        <!-- Generated code sections -->
+        <div class="generated-code">
+            <div class="gencode-html">
+                <h2 class="gen-caption">Generated HTML</h2>
+                <div class="code" id="generated-html"></div>
+            </div>
+            
+            <div class="gencode-css">
+                <h2 class="gen-caption">Generated CSS</h2>
+                <div class="code" id="generated-css"></div>
+                <br>
+                <div class="code" id="item-css"></div>
+            </div>
+        </div>
+    </section>
+
+    <!--Footer Section-->
+    <footer>
+        <div class="footer_con">
+            &copy; 2024 London Mason
+          </div>
+    </footer>
+
+    <!--Linking js-->
+    <script src="../Script/grid.js"></script>
+</body>
+</html>
