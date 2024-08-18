@@ -91,6 +91,13 @@ legend {
     display: block;
     margin-bottom: 5px;
 }
+
+/*styling the label*/
+
+label {
+    font-weight: bold;
+}
+
 /*styling inputs*/
 
 .form-group input, .form-group select {

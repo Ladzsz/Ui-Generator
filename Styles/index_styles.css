@@ -49,6 +49,16 @@ header {
     border-bottom-right-radius: 16px;
 }
 
+/* Header Media query for smaller screens */
+
+@media (max-width: 768px) {
+    header {
+        padding: 20px;
+        justify-content: center;
+        gap: 20px;
+    }
+}
+
 /*styling the first section*/
 
 .section_1 {

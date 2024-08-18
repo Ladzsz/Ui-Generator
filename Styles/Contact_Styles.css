@@ -23,6 +23,16 @@ header {
     border-bottom-right-radius: 16px;
 }
 
+/* Header Media query for smaller screens */
+
+@media (max-width: 768px) {
+    header {
+        padding: 20px;
+        justify-content: center;
+        gap: 20px;
+    }
+}
+
 /*styling logo*/
 
 img {
@@ -94,7 +104,7 @@ font-size: 2.8em;
     color: white;
 }
 
-/* Responsive styles */
+/* Responsive styles for my contact links */
 
 /* Styles for medium screens */
 @media (max-width: 1200px) {
@@ -141,7 +151,7 @@ footer {
     width: 100%;
     height: 75px;
     box-sizing: border-box;
-    margin-top: 400px;
+    margin-top: 10%;
 }
 
 .footer_con {
