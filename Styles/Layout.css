@@ -240,6 +240,8 @@ footer {
     height: 75px;
     box-sizing: border-box;
     margin-top: auto;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
 }
 
 .footer_con {
