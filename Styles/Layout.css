@@ -198,6 +198,18 @@ label {
     color: white;
 }
 
+/* Media query to style add and remove buttons */
+@media (max-width: 768px) {
+    .remove-add-btns {
+      display: flex;
+      gap: 10px; 
+    }
+  
+    .remove-add-btns > button {
+      flex: 1; 
+    }
+}
+
 /*styling the preview divs*/
 
 #preview-box > p {
