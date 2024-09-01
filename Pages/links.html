@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Links Page</title>
+    <link rel="stylesheet" href="../global_style.css">
+    <link rel="stylesheet" href="../Styles/links.css">
+</head>
+<body>
+    <!--Header Section-->
+    <header>
+        <img src="../images/Logo.png" alt="logo image" width>
+        <h1>Link Generator</h1>
+        <a href="../index.html" class="HomePage" target="_blank">HomePage</a>
+        <a href="Contact.html" class="contact" target="_blank">Contact Me</a>
+    </header>
+
+    <!--First section-->
+    <section class="section_1">
+        <h1 class="Top_text">Link Generator</h1>
+    </section>
+  
+   <!--Form section -->
+    <section class="button-form">
+    
+        <form id="link-form" action="#" onsubmit="handleLinkSubmit(event)">
+            <!--Link styles -->
+            <fieldset class="link_styles">
+                <legend>Customize Your Link</legend>
+    
+                <!--Form groups for each style -->
+                <div class="form-group">
+                    <label for="text">Link Text:</label>
+                    <input type="text" id="text" name="text" value="Click Here">
+                </div>
+                <!--Link Url-->
+                <div class="form-group">
+                    <label for="href">Link URL:</label>
+                    <input type="text" id="href" name="href" value="https://example.com">
+                </div>
+                <!--Backround color-->
+                <div class="form-group">
+                    <label for="bgColor">Background Color:</label>
+                    <input type="color" id="bgColor" name="bgColor" value="#4CAF50">
+                </div>
+                <!--Text color-->
+                <div class="form-group">
+                    <label for="textColor">Text Color:</label>
+                    <input type="color" id="textColor" name="textColor" value="#FFFFFF">
+                </div>
+                <!--Padding-->
+                <div class="form-group">
+                    <label for="padding">Padding:</label>
+                    <input type="text" id="padding" name="padding" value="10px 20px">
+                </div>
+                <!--Border-->
+                <div class="form-group">
+                    <label for="border">Border:</label>
+                    <input type="text" id="border" name="border" value="2px solid #4CAF50">
+                </div>
+                <!--Border Radius-->
+                <div class="form-group">
+                    <label for="borderRadius">Border Radius:</label>
+                    <input type="text" id="borderRadius" name="borderRadius" value="5px">
+                </div>
+                <!--Font Size-->
+                <div class="form-group">
+                    <label for="fontSize">Font Size:</label>
+                    <input type="text" id="fontSize" name="fontSize" value="16px">
+                </div>
+                <!--Font Weight-->
+                <div class="form-group">
+                    <label for="fontWeight">Font Weight:</label>
+                    <input type="text" id="fontWeight" name="fontWeight" value="400">
+                </div>
+            </fieldset>
+            
+            <!--Link html attirubte-->
+            <fieldset>
+                <legend>Link html Attribute</legend>
+                <!--Non rel opener-->
+                <div class="form-group" id="Checkbox-group">
+                    <label for="noopener">Open in new tab (Add rel="noopener"):</label>
+                    <input type="checkbox" id="noopener" name="noopener">
+                </div>
+            </fieldset>
+
+            <!-- Button to generate code and preview -->
+            <fieldset class="btn-area">
+                <button type="submit" class="form-btn">Generate Link</button>
+            </fieldset>
+        </form>
+</section>
+
+
+    <!-- Preview section -->
+    <section class="preview_sec">
+
+        <!-- Live preview container -->
+        <div class="preview-container">
+            <h2>Live Preview:</h2>
+            <div id="preview-box" class="preview-box">
+                <a id="preview-link">Your Link</a>
+            </div>
+        </div>
+
+        <!-- Generated code sections -->
+        <div class="generated-code">
+            <div class="gencode-html">
+                <h2 class="gen-caption">Generated HTML</h2>
+                <div class="code" id="generated-html"></div>
+            </div>
+            
+            <div class="gencode-css">
+                <h2 class="gen-caption">Generated CSS</h2>
+                <div class="code" id="generated-css"></div>
+            </div>
+        </div>
+    </section>
+
+    <!--Footer Section-->
+    <footer>
+        <div class="footer_con">
+            &copy; 2024 London Mason
+          </div>
+    </footer>
+    <script src="..//Script/links.js"></script>
+</body>
+</html>
