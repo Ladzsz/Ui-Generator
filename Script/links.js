@@ -4,7 +4,6 @@ function generateLink() {
     const href = document.getElementById('href').value;
     const bgColor = document.getElementById('bgColor').value;
     const textColor = document.getElementById('textColor').value;
-    const padding = document.getElementById('padding').value;
     const border = document.getElementById('border').value;
     const borderRadius = document.getElementById('borderRadius').value;
     const fontSize = document.getElementById('fontSize').value;
@@ -17,7 +16,6 @@ function generateLink() {
     previewLink.href = href;
     previewLink.style.backgroundColor = bgColor;
     previewLink.style.color = textColor;
-    previewLink.style.padding = padding;
     previewLink.style.border = border;
     previewLink.style.borderRadius = borderRadius;
     previewLink.style.fontSize = fontSize;
@@ -40,7 +38,6 @@ function generateLink() {
     const cssCode = `a {
     background-color: ${bgColor};
     color: ${textColor};
-    padding: ${padding};
     border: ${border};
     border-radius: ${borderRadius};
     font-size: ${fontSize};

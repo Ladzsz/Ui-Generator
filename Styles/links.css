@@ -144,7 +144,6 @@ fieldset {
     color: white;
 }
 
-
 /*styling Preview container*/
 
 .preview-container {
@@ -155,9 +154,26 @@ fieldset {
     text-align: center;
 }
 
-/*styling preview linl*/
+/*styling code output*/
+.generated-code {
+    margin-top: 20px;
+    white-space: pre-wrap;
+    background-color: #1E1E1E;
+    padding: 10px;
+    text-align: center;
+    border: solid white 21px;
+}
+
+/*styling preview link*/
+#preview-link {
+    display: inline-block; 
+    padding: 20px 20px;
+}
+
 #preview-link:hover {
     color: inherit;
+    display: inline-block;
+    box-sizing: border-box;
 }
 
 /*styling code output*/
