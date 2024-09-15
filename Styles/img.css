@@ -1,0 +1,171 @@
+/*styling logo*/
+
+img {
+    border-radius: 36px;
+    width: 70px;
+    height: 50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+/*styling contact link*/
+
+.contact, .HomePage {
+    color: black;
+    background-color: #541c44;
+    padding: 15px;
+    border-radius: 48px;
+    font-size: 1.1em;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+a:hover {
+    color: white;
+}
+
+/*styling body and html*/
+
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  body {
+    min-height: 100vh;
+  }
+
+/*styling header section*/
+
+header {
+    background-color: #6A0DAD;
+    padding: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around; 
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+}
+
+/*styling section 1*/
+.section_1 {
+    text-align: center;
+    font-size: 2.1em;
+    margin-top: 5%;
+}
+
+/* Styling the form section */
+#image-form {
+    max-width: 600px;
+    margin: auto;
+    background-color: #6A0DAD;
+    padding: 20px;
+    border: solid 4px #541c44;
+    border-radius: 24px;
+}
+
+/* Styling the fieldset */
+.button_styles {
+    border: none;
+}
+
+/* Styling the legend of the form */
+legend {
+    text-align: center;
+}
+
+label, legend {
+    font-weight: bold;
+}
+
+/* Styling form groups */
+.form-group {
+    margin-bottom: 15px;
+}
+
+/* Styling labels */
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* Styling inputs */
+.form-group input, .form-group select {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+/* Styling the button area */
+.btn-area {
+    text-align: center;
+    border: none;
+}
+
+/* Styling button */
+.form-btn {
+    padding: 10px 15px;
+    background-color: #541c44;
+    color: black;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 0.9em;
+    border-radius: 16px;
+}
+
+.form-btn:hover {
+    color: white;
+}
+
+
+/*styling Preview container*/
+
+.preview-container {
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    background-color: #e9ecef;
+    text-align: center;
+}
+
+/*styling code output*/
+.generated-code {
+    margin-top: 20px;
+    white-space: pre-wrap;
+    background-color: #1E1E1E;
+    padding: 10px;
+    text-align: center;
+    border: solid white 21px;
+}
+
+/*styling the generated code text*/
+
+.code, .gen-caption {
+    color: #6A9955;
+}
+
+/*styling footer section*/
+
+footer {
+    padding: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #6A0DAD;
+    width: 100%;
+    height: 75px;
+    box-sizing: border-box;
+    margin-top: auto;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+}
+
+.footer_con {
+    color: black;
+    font-weight: bold;
+    font-size: 1.2em;
+}
