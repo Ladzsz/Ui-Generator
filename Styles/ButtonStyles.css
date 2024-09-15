@@ -88,6 +88,12 @@ legend {
     margin-bottom: 5px;
 }
 
+/*making label and legend bold*/
+
+label, legend {
+    font-weight: bold;
+}
+
 /* Styling inputs */
 .form-group input, .form-group select {
     width: 100%;
