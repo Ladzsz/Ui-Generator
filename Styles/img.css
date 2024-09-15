@@ -58,7 +58,7 @@ header {
 }
 
 /* Styling the form section */
-.button-form {
+#image-form {
     max-width: 600px;
     margin: auto;
     background-color: #6A0DAD;
@@ -77,6 +77,11 @@ legend {
     text-align: center;
 }
 
+/*making the label and legend bold*/
+label, legend {
+    font-weight: bold;
+}
+
 /* Styling form groups */
 .form-group {
     margin-bottom: 15px;
@@ -86,12 +91,6 @@ legend {
 .form-group label {
     display: block;
     margin-bottom: 5px;
-}
-
-/*making label and legend bold*/
-
-label, legend {
-    font-weight: bold;
 }
 
 /* Styling inputs */
