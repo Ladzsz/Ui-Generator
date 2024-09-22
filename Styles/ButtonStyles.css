@@ -132,6 +132,7 @@ label, legend {
     border: 1px solid #ddd;
     background-color: #e9ecef;
     text-align: center;
+    overflow-x: auto;
 }
 
 /*styling code output*/
