@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation Page</title>
+    <link rel="stylesheet" href="../global_style.css">
+    <link rel="stylesheet" href="../Styles/animation.css">
+</head>
+<body>
+    <!--Header Section-->
+    <header>
+        <img src="../images/Logo.png" alt="logo image">
+        <h1>Animation Gen</h1>
+        <a href="../index.html" class="HomePage" target="_blank">HomePage</a>
+        <a href="Contact.html" class="contact" target="_blank">Contact Me</a>
+    </header>
+
+    <!-- First section -->
+    <section class="section_1">
+        <h1 class="Top_text">Animation Generator</h1>
+    </section>
+
+    <!-- Animation Generator Section -->
+    <section class="animation-form flexbox-form">
+        <form id="animation-form" action="#" onsubmit="handleAnimationSubmit(event)">
+            <!-- Animation Styles -->
+            <fieldset class="container_styles">
+                <legend>Customize Your Button Animation</legend>
+
+                <!-- Animation Type -->
+                <div class="form-group">
+                    <label for="animationType">Animation Type:</label>
+                    <select id="animationType" name="animationType">
+                        <option value="bounce">Bounce</option>
+                        <option value="fade">Fade</option>
+                        <option value="slide">Slide</option>
+                        <option value="rotate">Rotate</option>
+                    </select>
+                </div>
+
+                <!-- Animation Duration -->
+                <div class="form-group">
+                    <label for="duration">Animation Duration (seconds):</label>
+                    <input type="number" id="duration" name="duration" value="2">
+                </div>
+
+                <!-- Timing Function -->
+                <div class="form-group">
+                    <label for="timingFunction">Timing Function:</label>
+                    <select id="timingFunction" name="timingFunction">
+                        <option value="ease">Ease</option>
+                        <option value="linear">Linear</option>
+                        <option value="ease-in">Ease-in</option>
+                        <option value="ease-out">Ease-out</option>
+                        <option value="ease-in-out">Ease-in-out</option>
+                    </select>
+                </div>
+
+                <!-- Animation Delay -->
+                <div class="form-group">
+                    <label for="delay">Animation Delay (seconds):</label>
+                    <input type="number" id="delay" name="delay" value="0">
+                </div>
+
+                <!-- Iteration Count -->
+                <div class="form-group">
+                    <label for="iterationCount">Iteration Count:</label>
+                    <input type="number" id="iterationCount" name="iterationCount" value="1">
+                </div>
+
+                <!-- Animation Direction -->
+                <div class="form-group">
+                    <label for="direction">Animation Direction:</label>
+                    <select id="direction" name="direction">
+                        <option value="normal">Normal</option>
+                        <option value="reverse">Reverse</option>
+                        <option value="alternate">Alternate</option>
+                    </select>
+                </div>
+            </fieldset>
+
+            <!-- Generate Button -->
+            <fieldset class="btn-area">
+                <button type="submit" class="form-btn">Generate Animation</button>
+            </fieldset>
+        </form>
+    </section>
+
+    <!-- Preview Section -->
+    <section class="preview_sec">
+        <div class="preview-container">
+            <h2>Live Animation Preview:</h2>
+            <div id="animation-preview-box" class="preview-box">
+                <button id="animated-button">Animate Me</button>
+            </div>
+        </div>
+
+        <!-- Generated Code Section -->
+        <div class="generated-code">
+            <div class="gencode-html">
+                <h2 class="gen-caption">Generated HTML</h2>
+                <div class="code" id="generated-animation-html"></div>
+            </div>
+
+            <div class="gencode-css">
+                <h2 class="gen-caption">Generated CSS</h2>
+                <div class="code" id="generated-animation-css"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer_con">
+            &copy; 2024 London Mason
+        </div>
+    </footer>
+
+    <script src="../Script/animation.js"></script>
+</body>
+</html>
