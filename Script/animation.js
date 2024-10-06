@@ -92,12 +92,38 @@ function generateAnimation() {
     ${keyframes}`;
 
     // Updating the code display areas
-    document.getElementById('generated-animation-html').textContent = htmlCode;
-    document.getElementById('generated-animation-css').textContent = cssCode;
+    document.getElementById('generated-html').textContent = htmlCode;
+    document.getElementById('generated-css').textContent = cssCode;
 }
 
 // Handle form submission
 function handleAnimationSubmit(event) {
     event.preventDefault(); 
     generateAnimation(); 
+}
+
+//html copy function
+function htmlText() {
+    // Get the generated HTML code
+    const htmlCode = document.getElementById('generated-html').textContent;
+
+    // Copy the HTML to clipboard
+    navigator.clipboard.writeText(htmlCode).then(() => {
+        alert("HTML has been copied to clipboard!");
+    }).catch(err => {
+        console.error("Failed to copy HTML: ", err);
+    });
+}
+
+//css copy function
+function cssText() {
+    // Get the generated CSS code
+    const cssCode = document.getElementById('generated-css').textContent;
+
+    // Copy the CSS to clipboard
+    navigator.clipboard.writeText(cssCode).then(() => {
+        alert("CSS has been copied to clipboard!");
+    }).catch(err => {
+        console.error("Failed to copy CSS: ", err);
+    });
 }

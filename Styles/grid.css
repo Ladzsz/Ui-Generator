@@ -12,12 +12,13 @@ img {
 
 .contact, .HomePage {
     color: black;
-    background-color: #541c44;
+    background-color: #DF9FCD;
     padding: 15px;
     border-radius: 48px;
     font-size: 1.1em;
     font-weight: bolder;
     cursor: pointer;
+    border: solid 2px #541c44;
 }
 
 a:hover {
@@ -40,7 +41,7 @@ body, html {
 /*styling header section*/
 
 header {
-    background-color: #6A0DAD;
+    background-color: #D279B9;
     padding: 30px;
     display: flex;
     flex-wrap: wrap;
@@ -62,7 +63,7 @@ header {
 .grid-layout-form {
     max-width: 600px;
     margin: auto;
-    background-color: #6A0DAD;
+    background-color: #D279B9;
     padding: 20px;
     border: solid 4px #541c44;
     border-radius: 24px;
@@ -122,13 +123,14 @@ label {
 
 .form-group button {
     padding: 10px 15px;
-    background-color: #541c44;
+    background-color: #DF9FCD;
     color: black;
     border: none;
     cursor: pointer;
     border-radius: 24px;
     font-weight: bold;
     font-size: 0.9em;
+    border: solid 2px #541c44;
 }
 
 .form-group button:hover {
@@ -185,13 +187,14 @@ label {
 
 .remove-add-btns > button {
     padding: 10px 15px;
-    background-color: #541c44;
+    background-color: #DF9FCD;
     color: black;
     border: none;
     cursor: pointer;
     border-radius: 24px;
     font-weight: bold;
     font-size: 0.9em;
+    border: solid 2px #541c44;
 }
 
 .remove-add-btns > button:hover {
@@ -224,6 +227,27 @@ label {
     background-color: lightgray;
 }
 
+/*styling copy btns*/
+
+.copy-btns {
+    margin-top: 1%;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.copy-btns > button {
+    padding: 10px 15px;
+    background-color: #DF9FCD;
+    color: black;
+    border: none;
+    cursor: pointer;
+    border-radius: 24px;
+    font-weight: bold;
+    font-size: 0.9em;
+    border: solid 2px #541c44;
+}
+
 /*styling the generated code*/
 
 .generated-code {
@@ -247,7 +271,7 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #6A0DAD;
+    background-color: #D279B9;
     width: 100%;
     height: 75px;
     box-sizing: border-box;

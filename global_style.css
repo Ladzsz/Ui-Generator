@@ -1,37 +1,4 @@
-/*
-LIST OF COLORS THAT MAY BE USED
-
-
-Primary Purple:
-Hex: #6A0DAD
-RGB: 106, 13, 173
-
-Light Purple:
-Hex: #B19CD9
-RGB: 177, 156, 217
-
-Accent Purple:
-Hex: #8A2BE2
-RGB: 138, 43, 226
-
-White:
-Hex: #FFFFFF
-RGB: 255, 255, 255
-
-Light Gray (for subtle backgrounds or borders):
-Hex: #F0F0F0
-RGB: 240, 240, 240
-
-Dark Purple (for text or elements requiring contrast):
-Hex: #4B0082
-RGB: 75, 0, 130
-
-Purple Tint (for hover effects or less prominent elements):
-Hex: #D8BFD8
-RGB: 216, 191, 216
-
-*/
-
+/*styling the links and html*/
 
 a {
     text-decoration: none;
@@ -40,3 +7,8 @@ a {
 html {
     font-family: 'Roboto', sans-serif;
 }
+
+
+/*buttons and links will be #DF9FCD*/
+
+/*forms and backrounds will be #D279B9*/
