@@ -227,6 +227,27 @@ label {
     background-color: lightgray;
 }
 
+/*styling copy btns*/
+
+.copy-btns {
+    margin-top: 1%;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.copy-btns > button {
+    padding: 10px 15px;
+    background-color: #DF9FCD;
+    color: black;
+    border: none;
+    cursor: pointer;
+    border-radius: 24px;
+    font-weight: bold;
+    font-size: 0.9em;
+    border: solid 2px #541c44;
+}
+
 /*styling the generated code*/
 
 .generated-code {
