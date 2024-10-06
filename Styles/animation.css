@@ -10,12 +10,13 @@ img {
 /* Styling contact link */
 .contact, .HomePage {
     color: black;
-    background-color: #541c44;
+    background-color: #DF9FCD;
     padding: 15px;
     border-radius: 48px;
     font-size: 1.1em;
     font-weight: bolder;
     cursor: pointer;
+    border: solid 2px #541c44;
 }
 
 a:hover {
@@ -36,7 +37,7 @@ body {
 
 /* Styling header section */
 header {
-    background-color: #6A0DAD;
+    background-color: #D279B9;
     padding: 30px;
     display: flex;
     flex-wrap: wrap;
@@ -58,7 +59,7 @@ header {
 .flexbox-form {
     max-width: 600px;
     margin: auto;
-    background-color: #6A0DAD;
+    background-color: #D279B9;
     padding: 20px;
     border: solid 4px #541c44;
     border-radius: 24px;
@@ -112,13 +113,14 @@ label {
 /* Styling button */
 .form-btn {
     padding: 10px 15px;
-    background-color: #541c44;
+    background-color: #DF9FCD;
     color: black;
     border: none;
     cursor: pointer;
     border-radius: 24px;
     font-weight: bold;
     font-size: 0.9em;
+    border: solid 2px #541c44;
 }
 
 .form-btn:hover {
@@ -189,7 +191,7 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #6A0DAD;
+    background-color: #D279B9;
     width: 100%;
     height: 75px;
     box-sizing: border-box;
